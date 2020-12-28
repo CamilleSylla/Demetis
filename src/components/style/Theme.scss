@@ -1,0 +1,36 @@
+.banner_text_slogan {
+    font-size: 50px;
+    color: white;
+    font-weight: bolder;
+    width: 80%;
+    margin: 0;
+    font-weight: 800;
+}
+.button_white {
+    border: 2px solid white;
+    color: white;
+    text-decoration: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 5vh;
+    font-weight: 600;
+}
+
+.button_gold {
+    border: 2px solid#D3BB8C;
+    font-weight: 600;
+    color: #1C3661;
+    text-decoration: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D3BB8C;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 5vh;
+}
