@@ -1,0 +1,41 @@
+#args {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        color: #1c3661;
+        margin: 0;
+    }
+    p {
+        color: #1c3661;
+        margin: 0;
+    }
+    #args_cards_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        #args_cards_grid {
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 5%;
+            color: black;
+            .args_cards {
+                display: flex;
+                img {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    #args_sentence {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

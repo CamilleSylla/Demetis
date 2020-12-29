@@ -1,36 +1,76 @@
+h2 {
+  margin: 0;
+  margin-top: 5%;
+  padding-bottom: 1vh;
+  font-size: 26px;
+  border-bottom: 2px solid white;
+  width: 100%;
+  overflow: visible;
+  color: white;
+  transition: all ease 0.3s;
+}
+p {
+  color: white;
+  transition: all ease 0.3s;
+}
+h3 {
+  width: 75%;
+  font-size: 35px;
+  font-weight: 600;
+  font-style: italic;
+  color: #1c3661;
+  text-align: center;
+}
+
 .banner_text_slogan {
-    font-size: 50px;
-    color: white;
-    font-weight: bolder;
-    width: 80%;
-    margin: 0;
-    font-weight: 800;
+  font-size: 50px;
+  color: white;
+  font-weight: bolder;
+  width: 80%;
+  margin: 0;
+  font-weight: 800;
 }
 .button_white {
-    border: 2px solid white;
-    color: white;
-    text-decoration: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    border-radius: 15px;
-    margin-top: 5vh;
-    font-weight: 600;
+  border: 2px solid white;
+  color: white;
+  text-decoration: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  margin-top: 5vh;
+  font-weight: 600;
+  transition: all ease 0.3s;
+  &:hover {
+    color: #1c3661;
+    background-color: white;
+    -webkit-box-shadow: 0px 9px 15px 2px rgba(255,255,255,0.66); 
+box-shadow: 0px 9px 15px 2px rgba(255,255,255,0.66);
+    transform: translate(0,-3px);
+  }
 }
 
 .button_gold {
-    border: 2px solid#D3BB8C;
-    font-weight: 600;
-    color: #1C3661;
-    text-decoration: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D3BB8C;
-    width: 200px;
-    height: 50px;
-    border-radius: 15px;
-    margin-top: 5vh;
+  border: 2px solid#D3BB8C;
+  font-weight: 600;
+  color: #1c3661;
+  text-decoration: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3bb8c;
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  margin-top: 5vh;
+  transition: all ease 0.3s;
+  &:hover {
+    color: #d3bb8c;
+    background-color: #1c3661;
+    -webkit-box-shadow: 0px 9px 15px 0px rgba(211, 187, 140, 0.75);
+    box-shadow: 0px 9px 15px 0px rgba(211, 187, 140, 0.75);
+    transform: translate(0,-3px);
+  }
 }
