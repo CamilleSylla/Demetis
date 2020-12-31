@@ -1,17 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import Banner from './components/Home/Banner/Banner';
-import Args from './components/Home/Args/Args';
-import Services from './components/Home/Services/Services';
-import Bio from './components/Home/Bio/Bio';
+import Home from './components/Home/Home';
+import { Route, Switch } from 'react-router-dom';
+import Services from './components/Services/Services';
+
 
 function App() {
   return (
     <div className="App">
-      <Banner/>
-      <Args/>
-      <Services/>
-      <Bio/>
+      <Route render={({ location }) => (
+            <Switch location={location} key={location.pathname}>
+              <Route path="/" exact component={Home} />
+              <Route path="/services" component={Services} />
+            </Switch>
+        )} />
     </div>
   );
 }
