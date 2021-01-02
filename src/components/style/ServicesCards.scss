@@ -1,0 +1,30 @@
+#cards_menu {
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    .services_page_cards {
+        width: 100%;
+        height: 15vw;
+        border-radius: 10px;
+        background-color: rgba(211, 187, 140, 0.5);
+        border: 3px solid #1c3661;
+        text-align: center ;
+        transition: all 0.3s ease;
+        h5 {
+            color: #1c3661;
+            font-size: 24px;
+            margin: 0;
+        }
+        p {
+            color: #1c3661;
+            font-weight: 500;
+        }
+        img {
+            width: 4vw;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
+    }
+}
