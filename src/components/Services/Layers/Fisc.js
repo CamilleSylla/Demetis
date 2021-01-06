@@ -7,6 +7,7 @@ import Profile from "../../../assets/Icons/profile.svg";
 import { Link } from "react-router-dom";
 
 export default function Fisc() {
+  
   return (
     <div id="fisc">
       <div id="fisc_content">

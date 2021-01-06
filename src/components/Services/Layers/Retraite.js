@@ -12,7 +12,7 @@ export default function Retraite() {
     icons_2: Grow,
     title: "Préparer ma retraite",
     text:
-      "D’après la DREES, Le taux de remplacement du dernier salaire d’un cadre est de 60% au jour de la retraite.Selon certaines projections, il pourrait passer à 45% pour la génération de salarié née à partir de 1977.",
+      "D’après la DREES, Le taux de remplacement du dernier salaire d’un cadre est de 60% au jour de la retraite. \n\n Selon certaines projections, il pourrait passer à 45% pour la génération de salarié née à partir de 1977.",
     text_2: "En ajoutant à cela un contexte démographique peu favorable :",
     desc:
       "D’après l’INSEE, en 2015 nous étions 16,2 millions de personnes âgés de plus de 60 ans en France",
