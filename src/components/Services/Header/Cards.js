@@ -6,7 +6,7 @@ import Placement from '../../../assets/Icons/Placement.svg'
 import Retraite from '../../../assets/Icons/Retraite.svg'
 import { ServicesContext } from "../../Context/ServicesContext";
 
-export default function Cards({myRef}) {
+export default function Cards() {
 
   const [show, setShow] = useContext(ServicesContext);
 

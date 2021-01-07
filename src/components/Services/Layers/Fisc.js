@@ -11,19 +11,23 @@ export default function Fisc() {
   const pageVariant = {
     ini: {
         y: 0,
-        x: 0
+        x: 0,
+        opacity: 1
     },
     out: {
-        y: "100vh"
+        x: "100vh",
+        opacity: 0
     },
     in: {
-        x: "-100vw"
+        x: "-100vw",
+        opacity: 0
     }
 }
 const pageTransition = {
     type: "tween",
-    ease:"anticipate",
-    duration: .5
+    ease:"easeOut",
+    duration: .4,
+    delay: 0.4
 }
   return (
     <motion.div

@@ -39,8 +39,10 @@ export default function Retraite() {
 }
 const pageTransition = {
     type: "tween",
-    ease:"anticipate",
-    duration: .5
+    ease:"easeOut",
+    duration: .4,
+    delay: 0.4
+
 }
 
   return (

@@ -11,7 +11,7 @@ export default function Banner() {
       <Text/>
       <div id="banner_spacing">
       </div>
-      <BannerMenu/>
+      {/* <BannerMenu/> */}
       <BannerImg/>
     </header>
   );

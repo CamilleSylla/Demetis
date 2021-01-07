@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext } from "react";
 import { ServicesContext } from "../Context/ServicesContext";
 import { AnimatePresence } from "framer-motion";
 import Services from "./Header/Services";
@@ -10,16 +10,16 @@ import Invest from "./Layers/Invest";
 import Retraite from "./Layers/Retraite";
 import Transmission from "./Layers/Transmission";
 import Tresorerie from "./Layers/Tresorerie";
+import { motion } from "framer-motion";
 
 export default function Main() {
   const [show, setShow] = useContext(ServicesContext);
   const top = document.getElementById("top");
   const middle = document.getElementById("middle");
   const bottom = document.getElementById("bottom");
-  const myRef = useRef(null)
   const Components = [
-    <Fisc/>,
-    <Retraite ref={myRef}/>,
+    <Fisc />,
+    <Retraite />,
     <Capital />,
     <Epargne />,
     <Invest />,
@@ -48,15 +48,36 @@ export default function Main() {
         return Components[show.component];
     }
   }
+  const pageVariant = {
+    ini: {
+        opacity: 1
+    },
+    out: {
+        opacity: 0
+    },
+    in: {
+        opacity: 0
+    }
+}
+const pageTransition = {
+    type: "tween",
+    ease:"easeOut",
+    duration: .4,
+}
   return (
-    <div>
-      <Services myRef={myRef}/>
-      <AnimatePresence exitBeforeEnter>
-          <div id="services_all">
-
-          {toShow()}
-          </div>
-    </AnimatePresence>
-    </div>
+    <motion.div
+      exit="out"
+      initial="in"
+      animate="ini"
+      variants={pageVariant}
+      transition={pageTransition}
+    >
+      <div>
+        <Services />
+        <AnimatePresence exitBeforeEnter>
+          <div id="services_all">{toShow()}</div>
+        </AnimatePresence>
+      </div>
+    </motion.div>
   );
 }

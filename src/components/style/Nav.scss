@@ -1,29 +1,28 @@
+button {
+    position: fixed;
+    z-index: 15;
+}
 #nav{
     position: fixed;
     z-index: 1;
     width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-evenly;
-    #hamburger{
-        width: 50px;
-        height: 50px;
+    
+    .the-blur{
+        top:0;
+        width: 100%;
+        min-height: 100%;
+        margin-bottom: 20px;
+        background: rgba(0,0,0,.4);
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+        -webkit-backdrop-filter: blur(1.5rem);
+        -moz-backdrop-filter: blur(1.5rem);
+        -o-backdrop-filter: blur(1.5rem);
+        -ms-backdrop-filter: blur(1.5rem);
+        backdrop-filter: blur(1.5rem);
         transition: all ease 0.3s;
-        cursor: pointer;
-        div {
-            height: 5px;
-            border-radius: 5px;
-            &:first-of-type {
-                width: 100%;
-            }
-            &:nth-of-type(2) {
-                width: 67%;
-            }
-            &:last-of-type{
-                width: 34%;
-            }
-        }
-    }
+     }
 }
