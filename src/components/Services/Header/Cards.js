@@ -1,14 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../../style/ServicesCards.scss";
 import Capital from '../../../assets/Icons/Capital.svg'
 import Fisc from '../../../assets/Icons/Fisc.svg'
 import Placement from '../../../assets/Icons/Placement.svg'
 import Retraite from '../../../assets/Icons/Retraite.svg'
-import { TargetContext } from "../../Context/TargerContext";
+import { ServicesContext } from "../../Context/ServicesContext";
 
-export default function Cards() {
+export default function Cards({myRef}) {
 
-  const [menu, setMenu] = useContext(TargetContext)
+  const [show, setShow] = useContext(ServicesContext);
 
   const CardsContent = [
     { title: "FISCALITE", content: "Réduire mes impôts", img: Fisc},
@@ -21,15 +21,17 @@ export default function Cards() {
     { title: "TRESORERIE", content: "Optimiser la trésorerie de votre entreprise" },
   ];
 
-  const Target = (e) => {
-    setMenu({...menu, target: e.target.id})
-    console.log(menu);
+  function Target(e) {
+    setShow({...show, component :e})
+    const elmnt = document.getElementById("services_all");
+    elmnt.scrollIntoView({behavior: 'smooth'});
   }
+
   return(
     <div id="cards_menu">
         {CardsContent.map((details, i) => {
             return (
-                <div className="services_page_cards" onClick={Target} id={details.title} key={details.title} >
+                <div className="services_page_cards" onClick={() => Target(i)} key={details.title} >
                     <img src={details.img} alt="icons"/>
                     <h5>{details.title}</h5>
                     <p>{details.content}</p>

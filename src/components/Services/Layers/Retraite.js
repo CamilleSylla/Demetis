@@ -4,6 +4,7 @@ import Vieux from "../../../assets/Img/vieux.jpg";
 import Old from "../../../assets/Icons/Old.svg";
 import Grow from "../../../assets/Icons/grow.svg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Retraite() {
   const Content = {
@@ -21,31 +22,59 @@ export default function Retraite() {
     text_3:
       "Il est primordial de préparer sa retraite afin de compléter les prestations du régime obligatoire qui pourraient être amenés à diminuer au fil du temps.",
   };
+  const pageVariant = {
+    ini: {
+        y: 0,
+        x: 0,
+        opacity: 1
+    },
+    out: {
+        x: "-100vw",
+        opacity: 0
+    },
+    in: {
+        x: "100vw",
+        opacity: 0
+    }
+}
+const pageTransition = {
+    type: "tween",
+    ease:"anticipate",
+    duration: .5
+}
 
   return (
-    <div id="retraite">
-      <div id="retraite_container">
-        <div id="retraite_first">
-          <img src={Content.img} alt="Personnnes agés" />
-          <div>
-            <h5>{Content.title}</h5>
-            <p>{Content.text}</p>
+    <motion.div
+      exit="out"
+      initial="in"
+      animate="ini"
+      variants={pageVariant}
+      transition={pageTransition}
+    >
+      <div id="retraite">
+        <div id="retraite_container">
+          <div id="retraite_first">
+            <img src={Content.img} alt="Personnnes agés" />
+            <div>
+              <h5>{Content.title}</h5>
+              <p>{Content.text}</p>
+            </div>
           </div>
-        </div>
-        <div id="retraite_second">
-          <p>{Content.text_2}</p>
-          <div id="retraite_details">
-            <img src={Content.icons} alt="profile personne agé" />
-            <p>{Content.desc}</p>
-            <img src={Content.icons_2} alt="croissance" />
-            <p>{Content.desc_2}</p>
+          <div id="retraite_second">
+            <p>{Content.text_2}</p>
+            <div id="retraite_details">
+              <img src={Content.icons} alt="profile personne agé" />
+              <p>{Content.desc}</p>
+              <img src={Content.icons_2} alt="croissance" />
+              <p>{Content.desc_2}</p>
+            </div>
           </div>
+          <p className="spacing-top">{Content.text_3}</p>
         </div>
-        <p className="spacing-top">{Content.text_3}</p>
+        <Link className="button_gold" to="/services">
+          Etre Contacté
+        </Link>
       </div>
-      <Link className="button_gold" to="/services">
-            Etre Contacté
-          </Link>
-    </div>
+    </motion.div>
   );
 }

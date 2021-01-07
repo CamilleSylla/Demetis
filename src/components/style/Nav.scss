@@ -1,0 +1,29 @@
+#nav{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    #hamburger{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        div {
+            height: 5px;
+            border-radius: 5px;
+            &:first-of-type {
+                width: 100%;
+            }
+            &:nth-of-type(2) {
+                width: 67%;
+            }
+            &:last-of-type{
+                width: 34%;
+            }
+        }
+    }
+}

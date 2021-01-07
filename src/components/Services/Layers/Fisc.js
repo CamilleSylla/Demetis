@@ -5,47 +5,72 @@ import Building from "../../../assets/Icons/building.svg";
 import Id from "../../../assets/Icons/id.svg";
 import Profile from "../../../assets/Icons/profile.svg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Fisc() {
-  
+  const pageVariant = {
+    ini: {
+        y: 0,
+        x: 0
+    },
+    out: {
+        y: "100vh"
+    },
+    in: {
+        x: "-100vw"
+    }
+}
+const pageTransition = {
+    type: "tween",
+    ease:"anticipate",
+    duration: .5
+}
   return (
-    <div id="fisc">
-      <div id="fisc_content">
-        <div id="fisc_content_text">
-          <h5>Reduire mes impôts</h5>
-          <p>
-            Il existe plusieurs dispositifs permettant de payer moins d’impôts.
-            Cela peut se faire via l’épargne ou par l’investissement (immobilier
-            par exemple). La pertinence de ses dispositifs se fera en fonction
-            de certains paramètres :
-          </p>
-          <div id="fisc_content_text_icons">
-            <div>
-              <img src={Id} alt="ID" />
-              <p>Votre situation civile</p>
+    <motion.div
+      exit="out"
+      initial="in"
+      animate="ini"
+      variants={pageVariant}
+      transition={pageTransition}
+    >
+      <div id="fisc">
+        <div id="fisc_content">
+          <div id="fisc_content_text">
+            <h5>Reduire mes impôts</h5>
+            <p>
+              Il existe plusieurs dispositifs permettant de payer moins
+              d’impôts. Cela peut se faire via l’épargne ou par l’investissement
+              (immobilier par exemple). La pertinence de ses dispositifs se fera
+              en fonction de certains paramètres :
+            </p>
+            <div id="fisc_content_text_icons">
+              <div>
+                <img src={Id} alt="ID" />
+                <p>Votre situation civile</p>
+              </div>
+              <div>
+                <img src={Arrow} alt="ID" />
+              </div>
+              <div>
+                <img src={Profile} alt="ID" />
+                <p>Votre situation civile</p>
+              </div>
+              <div>
+                <img src={Arrow} alt="ID" />
+              </div>
+              <div>
+                <img src={Building} alt="ID" />
+                <p>Votre situation civile</p>
+              </div>
             </div>
-            <div>
-              <img src={Arrow} alt="ID" />
-            </div>
-            <div>
-              <img src={Profile} alt="ID" />
-              <p>Votre situation civile</p>
-            </div>
-            <div>
-              <img src={Arrow} alt="ID" />
-            </div>
-            <div>
-              <img src={Building} alt="ID" />
-              <p>Votre situation civile</p>
-            </div>
+            <p>Il est donc nécessaire de procéder à un audit en amont.</p>
+            <Link className="button_gold" to="/services">
+              Etre Contacté
+            </Link>
           </div>
-          <p>Il est donc nécessaire de procéder à un audit en amont.</p>
-          <Link className="button_gold" to="/services">
-            Etre Contacté
-          </Link>
+          <div id="fisc_img"></div>
         </div>
-        <div id="fisc_img"></div>
       </div>
-    </div>
+    </motion.div>
   );
 }

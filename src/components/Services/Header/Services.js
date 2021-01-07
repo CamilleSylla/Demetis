@@ -4,7 +4,7 @@ import "../../style/ServicesPage.scss"
 import Cards from './Cards'
 import Text from './Header'
 
-export default function Services () {
+export default function Services ({myRef}) {
 
     const [menu, setMenu] = useContext(TargetContext)
 
@@ -12,7 +12,7 @@ export default function Services () {
 
         <header id="services_page">
             <Text/>
-            <Cards/>
+            <Cards myRef={myRef}/>
         </header>
     )
 }
