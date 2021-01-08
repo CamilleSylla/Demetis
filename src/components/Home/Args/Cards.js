@@ -7,11 +7,6 @@ import Man from "../../../assets/Icons/Man.svg";
 export default function Cards() {
   const Content = [
     {
-      title: "Sur Mesure",
-      desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
-      img: Man,
-    },
-    {
       title: "Confiance",
       desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
       img: Conf,
@@ -20,6 +15,11 @@ export default function Cards() {
       title: "Confidentialité",
       desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
       img: Lock,
+    },
+    {
+      title: "Sur Mesure",
+      desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
+      img: Man,
     },
   ];
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Logo from '../../../assets/Logos/BlueBack.svg'
 export default function Text() {
   return (
     <div id="banner_title_container">

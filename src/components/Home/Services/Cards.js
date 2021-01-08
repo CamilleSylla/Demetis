@@ -5,19 +5,19 @@ import Arrow from "../../../assets/Icons/arrowBlue.svg"
 export default function Cards () {
     const Content = [
         {
-          categorie: "Catégorie",
+          categorie: "Fiscalité",
           desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
         },
         {
-          categorie: "Catégorie",
+          categorie: "Epargne",
           desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
         },
         {
-          categorie: "Catégorie",
+          categorie: "Retraite",
           desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
         },
         {
-          categorie: "Catégorie",
+          categorie: "Immobilié",
           desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
         },
       ];
