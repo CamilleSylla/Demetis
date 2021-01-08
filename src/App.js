@@ -7,27 +7,30 @@ import Nav from "./components/Nav/Nav";
 import { ServicesProvider } from "./components/Context/ServicesContext";
 import { AnimatePresence } from "framer-motion";
 import { MenuProvider } from "./components/Context/MenuContext";
+import { NavProvider } from "./components/Context/NavContext";
 
 function App() {
   const location = useLocation;
   return (
     <div className="App">
       <MenuProvider>
-        <Nav />
-        <TargetProvider>
-          <ServicesProvider>
-            <Route
-              render={({ location }) => (
-                <AnimatePresence exitBeforeEnter>
-                  <Switch location={location} key={location.pathname}>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/services" component={Main} />
-                  </Switch>
-                </AnimatePresence>
-              )}
-            />
-          </ServicesProvider>
-        </TargetProvider>
+        <NavProvider>
+          <Nav />
+          <TargetProvider>
+            <ServicesProvider>
+              <Route
+                render={({ location }) => (
+                  <AnimatePresence exitBeforeEnter>
+                    <Switch location={location} key={location.pathname}>
+                      <Route path="/" exact component={Home} />
+                      <Route path="/services" component={Main} />
+                    </Switch>
+                  </AnimatePresence>
+                )}
+              />
+            </ServicesProvider>
+          </TargetProvider>
+        </NavProvider>
       </MenuProvider>
     </div>
   );

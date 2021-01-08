@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Banner from "./Banner/Banner";
 import Args from "./Args/Args";
 import Services from "./Services/Services";
 import Bio from "./Bio/Bio";
 import { motion } from "framer-motion";
+import { NavContext } from "../Context/NavContext";
 
 export default function Home() {
-  const top = document.getElementById("top");
-  const middle = document.getElementById("middle");
-  const bottom = document.getElementById("bottom");
+
+  const [logoSelect, setLogoSelect] = useContext(NavContext)
+  
   const pageVariant = {
     ini: {
       opacity: 1,
@@ -25,6 +26,9 @@ export default function Home() {
     ease: "easeOut",
     duration: 0.4,
   };
+  useEffect(() => {
+    setLogoSelect(1)
+  })
   return (
     <motion.div
       exit="out"

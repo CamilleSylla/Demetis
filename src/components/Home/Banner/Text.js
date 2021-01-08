@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from '../../../assets/Logos/BlueBack.svg'
+import Arrow from '../../../assets/Icons/arrowGold.svg'
 export default function Text() {
   return (
     <div id="banner_title_container">
@@ -17,6 +17,8 @@ export default function Text() {
             Être contacté
           </Link>
         </div>
+        <img src={Arrow} alt="Continuer"/>
+
       </div>
     </div>
   );

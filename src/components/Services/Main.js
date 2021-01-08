@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ServicesContext } from "../Context/ServicesContext";
 import { AnimatePresence } from "framer-motion";
 import Services from "./Header/Services";
@@ -11,12 +11,12 @@ import Retraite from "./Layers/Retraite";
 import Transmission from "./Layers/Transmission";
 import Tresorerie from "./Layers/Tresorerie";
 import { motion } from "framer-motion";
+import { NavContext } from "../Context/NavContext";
+import { useLocation } from "react-router-dom";
 
 export default function Main() {
   const [show, setShow] = useContext(ServicesContext);
-  const top = document.getElementById("top");
-  const middle = document.getElementById("middle");
-  const bottom = document.getElementById("bottom");
+  const [logoSelect, setLogoSelect] = useContext(NavContext)
   const Components = [
     <Fisc />,
     <Retraite />,
@@ -64,6 +64,9 @@ const pageTransition = {
     ease:"easeOut",
     duration: .4,
 }
+useEffect(() => {
+  setLogoSelect(0);
+},[])
   return (
     <motion.div
       exit="out"
