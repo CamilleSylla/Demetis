@@ -1,40 +1,39 @@
 import React from "react";
+import "../style/Contact.scss";
+import Content from "./Content";
 import { motion } from "framer-motion";
-
-export default function Text() {
-  const Sentence = "Un offre adapté,\n un rendement assuré !";
+import Form from "./Form";
+export default function Contact() {
   const pageVariant = {
     ini: {
-      y: 0,
       opacity: 1,
     },
     out: {
-      y: "-50vh",
       opacity: 0,
     },
     in: {
-      y: "50vh",
       opacity: 0,
     },
   };
   const pageTransition = {
     type: "tween",
     ease: "easeOut",
-    duration: 1,
+    duration: 0.4,
   };
   return (
-    <div className="motion_services">
-<motion.div
+    <motion.div
       exit="out"
       initial="in"
       animate="ini"
       variants={pageVariant}
       transition={pageTransition}
-      className="motion_text"
     >
-      <h4 className="banner_text_slogan_services">{Sentence}</h4>
+      <div id="contact">
+        <div id="contact_views">
+          <Content />
+          <Form/>
+        </div>
+      </div>
     </motion.div>
-    </div>
-    
   );
 }

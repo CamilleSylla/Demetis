@@ -1,11 +1,14 @@
 #services_page {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .banner_text_slogan {
-        color: #1c3661;
-        margin-bottom: 7vh;
-    }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .banner_text_slogan_services {
+    color: #1c3661;
+    margin-bottom: 7vh;
+    white-space: pre-line;
+    font-size: 50px;
+    font-weight: 800;
+  }
 }

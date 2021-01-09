@@ -43,7 +43,7 @@ export default function SideBar() {
               to="/contact"
               activeStyle={{
                 fontWeight: "bold",
-                color: "red",
+                color: "white",
               }}
             >
               Contact

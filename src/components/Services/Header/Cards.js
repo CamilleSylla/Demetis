@@ -15,10 +15,10 @@ export default function Cards() {
     { title: "RETRAITE", content: "Préparer ma retraite", img: Retraite },
     { title: "CAPITAL", content: "Se constituer un capital", img: Capital },
     { title: "PLACEMENT", content: "Placer mon argent ", img: Placement },
-    { title: "IMMOBILIER", content: "Investir dans l’immobilier" },
-    { title: "ASSURANCE", content: "Solutions d’assurance" },
-    { title: "SUCCESSION", content: "Préparer votre transmission" },
-    { title: "TRESORERIE", content: "Optimiser la trésorerie de votre entreprise" },
+    { title: "IMMOBILIER", content: "Investir dans l’immobilier", img: Capital },
+    { title: "ASSURANCE", content: "Solutions d’assurance", img: Capital },
+    { title: "SUCCESSION", content: "Préparer votre transmission", img: Capital },
+    { title: "TRESORERIE", content: "Optimiser la trésorerie de votre entreprise", img: Capital },
   ];
 
   function Target(e) {
@@ -33,8 +33,11 @@ export default function Cards() {
             return (
                 <div className="services_page_cards" onClick={() => Target(i)} key={details.title} >
                     <img src={details.img} alt="icons"/>
+                    <div>
                     <h5>{details.title}</h5>
                     <p>{details.content}</p>
+                      </div>
+                    
                     </div>
             )
         })}

@@ -8,6 +8,7 @@ import { ServicesProvider } from "./components/Context/ServicesContext";
 import { AnimatePresence } from "framer-motion";
 import { MenuProvider } from "./components/Context/MenuContext";
 import { NavProvider } from "./components/Context/NavContext";
+import Contact from "./components/Contact/Contact.js";
 
 function App() {
   const location = useLocation;
@@ -24,6 +25,7 @@ function App() {
                     <Switch location={location} key={location.pathname}>
                       <Route path="/" exact component={Home} />
                       <Route path="/services" component={Main} />
+                      <Route path="/contact" component={Contact} />
                     </Switch>
                   </AnimatePresence>
                 )}
