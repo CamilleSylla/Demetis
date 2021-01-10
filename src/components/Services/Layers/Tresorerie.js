@@ -49,7 +49,7 @@ export default function Tresorerie() {
           <p>{Content.text_1}</p>
           <p id="merge">{Content.text_2}</p>
           <img src={Content.img} alt="graphique" />
-          <Link className="button_gold" to="/services">
+          <Link className="button_gold" to="/contact">
             Etre Contacté
           </Link>
         </div>

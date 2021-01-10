@@ -71,7 +71,7 @@ export default function Assurance() {
               </div>
             );
           })}
-          <Link className="button_gold" to="/services">
+          <Link className="button_gold" to="/contact">
             Etre Contacté
           </Link>
         </div>

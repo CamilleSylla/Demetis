@@ -45,7 +45,7 @@ export default function Capital() {
           <img src={Content.img} alt="appartement" />
           <h5>{Content.title}</h5>
           <p>{Content.text}</p>
-          <Link className="button_gold" to="/services">
+          <Link className="button_gold" to="/contact">
             Etre Contacté
           </Link>
         </div>

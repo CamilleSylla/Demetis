@@ -7,7 +7,7 @@ import { MenuContext } from "../Context/MenuContext";
 import LogoWhiteBG from "../../assets/Logos/LogoWhiteBG.svg";
 import LogoBlueBG from "../../assets/Logos/BlueBack.svg";
 import { NavContext } from "../Context/NavContext";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Nav() {
   const [hide, setHide] = useContext(MenuContext);
@@ -45,10 +45,10 @@ export default function Nav() {
         }
       }
     } else {
-        for (let i = 0; i <= 2; i++) {
-            const bar = hamburger.getElementsByTagName("span");
-            bar[i].style.backgroundColor = "white";
-          }
+      for (let i = 0; i <= 2; i++) {
+        const bar = hamburger.getElementsByTagName("span");
+        bar[i].style.backgroundColor = "white";
+      }
       if (
         document.body.scrollTop > 300 ||
         document.documentElement.scrollTop > 300
@@ -64,7 +64,6 @@ export default function Nav() {
           "transparent";
         document.getElementById("top_nav_logo").style.maxHeight = "100%";
         setLogoSelect(1);
-        
       }
     }
   }
@@ -80,11 +79,8 @@ export default function Nav() {
       hamburger.style.justifyContent = "space-evenly";
       for (let i = 0; i <= 2; i++) {
         const bar = hamburger.getElementsByTagName("span");
-        if 
-          (location.pathname === "/services" 
-        ) {
+        if (location.pathname === "/services") {
           bar[i].style.backgroundColor = "#1c3661";
-          
         } else {
           bar[i].style.backgroundColor = "white";
         }
@@ -141,14 +137,16 @@ export default function Nav() {
           <span id="bot"></span>
         </a>
         <div id="top_nav_logo">
-          <img src={Logos[logoSelect]} alt="Demetis" />
+            <img src={Logos[logoSelect]} alt="Demetis" />
         </div>
       </div>
 
       <div id="nav">
         <SideBar />
         <div className="the-blur" onClick={() => setHide(!hide)}>
-          <img src={LogoBlueBack} alt="Demetis" />
+          <Link to="/">
+            <img src={LogoBlueBack} alt="Demetis" />
+          </Link>
         </div>
       </div>
     </div>

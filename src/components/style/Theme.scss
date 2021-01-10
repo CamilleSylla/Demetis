@@ -12,6 +12,7 @@ h2 {
 p {
   color: white;
   transition: all ease 0.3s;
+  white-space: pre-line;
 }
 h3 {
   width: 75%;
@@ -21,7 +22,9 @@ h3 {
   color: #1c3661;
   text-align: center;
 }
-
+a {
+  text-decoration: none;
+}
 .banner_text_slogan {
   font-size: 50px;
   color: white;

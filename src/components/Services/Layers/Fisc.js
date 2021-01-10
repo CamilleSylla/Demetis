@@ -68,7 +68,7 @@ const pageTransition = {
               </div>
             </div>
             <p>Il est donc nécessaire de procéder à un audit en amont.</p>
-            <Link className="button_gold" to="/services">
+            <Link className="button_gold" to="/contact">
               Etre Contacté
             </Link>
           </div>

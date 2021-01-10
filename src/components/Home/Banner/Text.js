@@ -44,7 +44,7 @@ export default function Text() {
           <Link className="button_white" to="/services">
             Services
           </Link>
-          <Link className="button_gold" to="/">
+          <Link className="button_gold" to="/contact">
             Être contacté
           </Link>
         </div>

@@ -1,37 +1,59 @@
-import React from 'react'
+import React, { useContext } from "react";
+import Fisc from "../../../assets/Icons/Fisc.svg";
+import Capital from "../../../assets/Icons/Capital.svg";
+import Retraite from "../../../assets/Icons/Retraite.svg";
+import Immo from "../../../assets/Icons/immobilier.svg";
+import Arrow from "../../../assets/Icons/arrowBlue.svg";
+import { Link } from "react-router-dom";
+import { ServicesContext } from "../../Context/ServicesContext";
 
-import Arrow from "../../../assets/Icons/arrowBlue.svg"
+export default function Cards() {
+  const [show, setShow] = useContext(ServicesContext);
 
-export default function Cards () {
-    const Content = [
-        {
-          categorie: "Fiscalité",
-          desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
-        },
-        {
-          categorie: "Epargne",
-          desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
-        },
-        {
-          categorie: "Retraite",
-          desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
-        },
-        {
-          categorie: "Immobilié",
-          desc: "Lorem Ipsum blab bla elfrjir eru ee z erj zejrjjejrzrez",
-        },
-      ];
-    return (
-        <div id="services_cards_container">
-            {Content.map((details, i) => {
-                return (
-                    <div className="services_cards">
-                        <h4>{details.categorie}</h4>
-                        <p>{details.desc}</p>
-                        <img src={Arrow} alt="fleche"/>
-                        </div>
-                )
-            })}
-        </div>
-    )
+  const Content = [
+    {
+      categorie: "FISCALITE",
+      desc: "Réduire mes impôts",
+      img: Fisc,
+      target: 0,
+    },
+    {
+      categorie: "CAPITAL",
+      desc: "Se constituer un capital",
+      img: Capital,
+      target: 2,
+    },
+    {
+      categorie: "RETRAITE",
+      desc: "Préparer ma retraite",
+      img: Retraite,
+      target: 1,
+    },
+    {
+      categorie: "IMMOBILIER",
+      desc: "Investir dans l’immobilier",
+      img: Immo,
+      target: 4,
+    },
+  ];
+  
+  return (
+    <div id="services_cards_container">
+      {Content.map((details, i) => {
+        return (
+          <Link to="/services">
+            <div
+              className="services_cards"
+              onClick={() => setShow({ ...show, component: details.target })}
+            >
+              <img id="icons" src={details.img} alt="icons" />
+              <h4>{details.categorie}</h4>
+              <p>{details.desc}</p>
+              <img id="fleche" src={Arrow} alt="fleche" />
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  );
 }

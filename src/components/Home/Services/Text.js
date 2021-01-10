@@ -11,8 +11,8 @@ export default function Text() {
     <div id="service_title">
       <h4 className="banner_text_slogan">{Content.title}</h4>
       <p>{Content.desc} </p>
-      <Link className="button_gold" to="/">
-        Être contacté
+      <Link className="button_gold" to="/services">
+        Tous nos services
       </Link>
     </div>
   );

@@ -73,7 +73,7 @@ const pageTransition = {
           </div>
           <p className="spacing-top">{Content.text_3}</p>
         </div>
-        <Link className="button_gold" to="/services">
+        <Link className="button_gold" to="/contact">
           Etre Contacté
         </Link>
       </div>

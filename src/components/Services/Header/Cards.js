@@ -1,47 +1,56 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../../style/ServicesCards.scss";
-import Capital from '../../../assets/Icons/Capital.svg'
-import Fisc from '../../../assets/Icons/Fisc.svg'
-import Placement from '../../../assets/Icons/Placement.svg'
-import Retraite from '../../../assets/Icons/Retraite.svg'
+import Capital from "../../../assets/Icons/Capital.svg";
+import Fisc from "../../../assets/Icons/Fisc.svg";
+import Placement from "../../../assets/Icons/Placement.svg";
+import Retraite from "../../../assets/Icons/Retraite.svg";
+import Immo from "../../../assets/Icons/immobilier.svg";
+import Assu from "../../../assets/Icons/assurance.svg";
+import Succ from "../../../assets/Icons/succession.svg";
+import Tresorerie from "../../../assets/Icons/tresorerie.svg";
 import { ServicesContext } from "../../Context/ServicesContext";
 
 export default function Cards() {
-
   const [show, setShow] = useContext(ServicesContext);
 
   const CardsContent = [
-    { title: "FISCALITE", content: "Réduire mes impôts", img: Fisc},
+    { title: "FISCALITE", content: "Réduire mes impôts", img: Fisc },
     { title: "RETRAITE", content: "Préparer ma retraite", img: Retraite },
     { title: "CAPITAL", content: "Se constituer un capital", img: Capital },
     { title: "PLACEMENT", content: "Placer mon argent ", img: Placement },
-    { title: "IMMOBILIER", content: "Investir dans l’immobilier", img: Capital },
-    { title: "ASSURANCE", content: "Solutions d’assurance", img: Capital },
-    { title: "SUCCESSION", content: "Préparer votre transmission", img: Capital },
-    { title: "TRESORERIE", content: "Optimiser la trésorerie de votre entreprise", img: Capital },
+    { title: "IMMOBILIER", content: "Investir dans l’immobilier", img: Immo },
+    { title: "ASSURANCE", content: "Solutions d’assurance", img: Assu },
+    { title: "SUCCESSION", content: "Préparer votre transmission", img: Succ },
+    {
+      title: "TRESORERIE",
+      content: "Optimiser la trésorerie de votre entreprise",
+      img: Tresorerie,
+    },
   ];
 
   function Target(e) {
-    setShow({...show, component :e})
+    setShow({ ...show, component: e });
     const elmnt = document.getElementById("services_all");
-    elmnt.scrollIntoView({behavior: 'smooth'});
+    elmnt.scrollIntoView({ behavior: "smooth" });
   }
 
-  return(
+  return (
     <div id="cards_menu">
-        {CardsContent.map((details, i) => {
-            return (
-                <div className="services_page_cards" onClick={() => Target(i)} key={details.title} >
-                    <img src={details.img} alt="icons"/>
-                    <div>
-                    <h5>{details.title}</h5>
-                    <p>{details.content}</p>
-                      </div>
-                    
-                    </div>
-            )
-        })}
+      {CardsContent.map((details, i) => {
+        return (
+          <div
+            className="services_page_cards"
+            onClick={() => Target(i)}
+            key={details.title}
+          >
+            <img src={details.img} alt="icons" />
+            <div>
+              <h5>{details.title}</h5>
+              <p>{details.content}</p>
+            </div>
+          </div>
+        );
+      })}
     </div>
-
-  ) ;
+  );
 }

@@ -47,7 +47,7 @@ export default function Invest() {
           <div id="invest_text">
             <h5>{Content.title}</h5>
             <p>{Content.text}</p>
-            <Link className="button_gold" to="/services">
+            <Link className="button_gold" to="/contact">
               Etre Contacté
             </Link>
           </div>

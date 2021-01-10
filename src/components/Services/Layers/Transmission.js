@@ -53,7 +53,7 @@ export default function Transmission() {
             <img src={Content.img} alt="Famille" />
             <p>{Content.text_3}</p>
           </div>
-          <Link className="button_gold" to="/services">
+          <Link className="button_gold" to="/contact">
             Etre Contacté
           </Link>
         </div>
