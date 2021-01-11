@@ -4,7 +4,9 @@ import Bnp from "../../../assets/Partners/bnp.svg";
 import Aviva from "../../../assets/Partners/aviva.svg";
 import Generali from "../../../assets/Partners/genrali.svg";
 import Mma from "../../../assets/Partners/mma.svg";
+import April from "../../../assets/Partners/April.png";
 import "../../style/Slider.scss";
+import { motion } from "framer-motion";
 
 export default function Slider() {
   const [slide, setSlide] = useState({
@@ -37,22 +39,54 @@ export default function Slider() {
       alt: "Mma",
       link: "https://www.mma.fr/",
     },
+    {
+      img: April,
+      alt: "April",
+      link: "https://www.april.fr/",
+    },
   ];
+  const pageVariant = {
+    ini: {
+      x: 0,
+      opacity: 1,
+    },
+    out: {
+      x: "-50vh",
+      opacity: 0,
+    },
+    in: {
+      x: "50vh",
+      opacity: 0,
+    },
+  };
+  const pageTransition = {
+    type: "tween",
+    ease: "easeOut",
+    duration: 1,
+  };
   function SliderLogo() {
     return Content.map((details, i) => {
       while (i >= slide.min && i <= slide.max) {
         return (
-          <div id="slider_element">
-            <img src={details.img} alt={details.alt} />
-          </div>
+          <motion.div
+            exit="out"
+            initial="in"
+            animate="ini"
+            variants={pageVariant}
+            transition={pageTransition}
+            className="slider_width"
+          > <div id="slider_element">
+          <img src={details.img} alt={details.alt} />
+        </div></motion.div>
+         
         );
       }
     });
   }
   function AutoPlay () {
       const Break = Content.length 
-      console.log(Break, Break + 1);
-      if (slide.max < Content.length + 1) {
+      console.log(Break, Break );
+      if (slide.max < Content.length -1) {
         setSlide({
             ...slide,
             max: slide.max + 3,
@@ -70,10 +104,10 @@ export default function Slider() {
       
   
   }
-//   setTimeout(
-//     AutoPlay,
-//       3500
-//     );
+  setTimeout(
+    AutoPlay,
+      6000
+    );
 
   return <div id="slider">{SliderLogo()}</div>;
 }

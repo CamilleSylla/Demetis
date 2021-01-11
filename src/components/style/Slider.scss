@@ -5,15 +5,23 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    #slider_element {
-        height: 60%;
-        width: 60%;
+    .slider_width{
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        img {
-            width: 50%;
-            height: 50%;
+        #slider_element {
+            height: 60%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 50%;
+                height: 50%;
+            }
         }
     }
+    
 }
