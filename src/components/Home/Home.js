@@ -5,6 +5,7 @@ import Services from "./Services/Services";
 import Bio from "./Bio/Bio";
 import { motion } from "framer-motion";
 import { NavContext } from "../Context/NavContext";
+import Slider from "./Slider/Slider";
 
 export default function Home() {
 
@@ -42,6 +43,7 @@ export default function Home() {
         <Args />
         <Services />
         <Bio />
+        <Slider/>
       </div>
     </motion.div>
   );

@@ -1,0 +1,19 @@
+#slider {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    #slider_element {
+        height: 60%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+}
