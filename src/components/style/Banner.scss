@@ -23,7 +23,10 @@
     justify-content: center;
     #banner_text {
       width: 80%;
-      img {
+      ._logo {
+        display: none;
+      }
+      #down_arrow {
         width: 4%;
         margin-bottom: 5%;
         transform: rotate(90deg);
@@ -75,8 +78,6 @@
       .banner_menu_card_content {
         height: 100%;
         width: 65%;
-
-        
       }
       &:hover {
         margin-top: 30px;
@@ -90,6 +91,65 @@
           }
           p {
             color: #1c3661;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen 
+and (max-width:800px)
+and (orientation : portrait) {
+  .banner {
+    width: 100%;
+    .banner_img {
+      display: none;
+    }
+    #banner_title_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      #banner_text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        ._logo {
+          display: block;
+          width: 33%;
+          margin-bottom: 5%;
+        }
+        #down_arrow {
+          margin-top: 10%;
+          width: 10%;
+        }
+        #banner_title {
+          width: 80%;
+          text-align: center;
+        }
+        #banner_buttons {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    #banner_spacing {
+    }
+    #banner_menu {
+      .banner_menu_card {
+        .banner_menu_card_content {
+        }
+        &:hover {
+          cursor: pointer;
+          .banner_menu_card_content {
+            h2 {
+            }
           }
         }
       }

@@ -9,11 +9,11 @@ export default function Args() {
 
   return (
     <div id="args">
-      <Cards />
+      <img className="_logo" src={Logo} alt="Logo"/>
       <div id="args_sentence">
         <h3>{Sentence}</h3>
       </div>
-    <img src={Logo} alt="Logo"/>
+      <Cards />
     </div>
   );
 }

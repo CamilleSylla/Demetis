@@ -10,6 +10,11 @@ export default function Text() {
   }
   return (
     <div id="bio_content">
+      <div className="bio_content_img">
+            <img src={Content.img} alt="Navid Niktash"/>
+            <h1>Navid Niktash</h1>
+            <p>Directeur Général</p>
+      </div>
       <div id="bio_content_text">
         <h2>{Content.title}</h2>
         <p>
@@ -19,11 +24,7 @@ export default function Text() {
           Nos Prestations
         </Link>
       </div>
-      <div className="bio_content_img">
-            <img src={Content.img} alt="Navid Niktash"/>
-            <h1>Navid Niktash</h1>
-            <p>Directeur Général</p>
-      </div>
+      
     </div>
   );
 }

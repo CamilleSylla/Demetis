@@ -92,14 +92,12 @@ export default function Slider() {
             max: slide.max + 3,
             min: slide.min + 3,
           })
-          console.log(slide)
       } else {
         setSlide({
             ...slide,
             max: 2,
             min: 0,
           })
-          console.log(slide)
       }
       
   

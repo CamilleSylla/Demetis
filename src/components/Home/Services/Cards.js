@@ -46,7 +46,7 @@ export default function Cards() {
               className="services_cards"
               onClick={() => setShow({ ...show, component: details.target })}
             >
-              <img id="icons" src={details.img} alt="icons" />
+              <img className="banner_services_icons" src={details.img} alt="icons" />
               <h4>{details.categorie}</h4>
               <p>{details.desc}</p>
               <img id="fleche" src={Arrow} alt="fleche" />

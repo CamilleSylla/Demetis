@@ -58,7 +58,7 @@
         width: 15%;
         
       }
-      #icons {
+      .banner_services_icons {
         width: 25%;
       }
       &:hover {
@@ -76,6 +76,51 @@
         }
         #fleche {
           display: block;
+        }
+      }
+    }
+  }
+}
+@media only screen 
+and (max-width:800px)
+and (orientation : portrait) {
+  #services {
+    height: auto;
+    flex-direction: column;
+    #service_title {
+      width: 80%;
+      align-items: center;
+      margin-top: 10%;
+      h2 {
+      }
+      p {
+        width: 100%;
+    text-align: center;
+      }
+    }
+    #services_cards_container {
+      margin-top: 5%;
+      margin-bottom: 10%;
+      width: 80%;
+      h4 {
+      }
+      p {
+      }
+      .services_cards {
+        p{
+        }
+        #fleche {
+        }
+        .banner_services_icons {
+          width: 35%;
+        }
+        &:hover {
+          p {
+          }
+          h4 {
+          }
+          #fleche {
+          }
         }
       }
     }

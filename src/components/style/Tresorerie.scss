@@ -36,3 +36,20 @@
         }
     }
 }
+
+@media only screen and (max-width: 800px) and (orientation: portrait) {
+    #tresorerie{
+        #tresorerie_container {
+            img {
+                display: none;
+            }
+            h5 {
+            }
+            p {
+            }
+            #merge {
+                margin-left: 0%;
+            }
+        }
+    }
+  }

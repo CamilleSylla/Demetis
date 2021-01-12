@@ -39,3 +39,37 @@
         align-items: center;
     }
 }
+@media only screen 
+and (max-width:800px)
+and (orientation : portrait) {
+    #args {
+        ._logo {
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+        height: auto;
+        h2 {
+        }
+        p {
+        }
+        #args_cards_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            #args_cards_grid {
+                width: 75%;
+                grid-template-columns: 1fr;
+                .args_cards {
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    img {
+                    }
+                }
+            }
+        }
+        #args_sentence {
+        }
+    }
+}

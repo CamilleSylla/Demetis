@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Arrow from "../../../assets/Icons/arrowGold.svg";
+import Logo from '../../../assets/Logos/BlueBack.svg'
 export default function Text() {
   const pageVariant = {
     ini: {
@@ -26,6 +27,7 @@ export default function Text() {
     <div id="banner_title_container">
       <div id="banner_text">
         <div className="motion_services">
+          <img className="_logo" src={Logo} alt="Logo"/>
           <motion.div
             exit="out"
             initial="in"
@@ -48,7 +50,7 @@ export default function Text() {
             Être contacté
           </Link>
         </div>
-        <img src={Arrow} alt="Continuer" />
+        <img id="down_arrow"src={Arrow} alt="Continuer" />
       </div>
     </div>
   );

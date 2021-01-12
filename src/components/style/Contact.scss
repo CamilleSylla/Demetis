@@ -11,91 +11,102 @@
     grid-template-columns: 55% 45%;
     column-gap: 5%;
     #contact_content {
-        .motion_services {
-            width: 100%;
-        }
+      .motion_services {
+        width: 100%;
+      }
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       table {
         th {
-            color: white;
-          }
-          #adresse {
-            text-transform: capitalize;
-          }
-          .rows {
-            height: 50px;
-          }
-          .rows_name {
-              width: 100px;
-          }
+          color: white;
+        }
+        #adresse {
+          text-transform: capitalize;
+        }
+        .rows {
+          height: 50px;
+        }
+        .rows_name {
+          width: 100px;
+        }
       }
-      
     }
     #form {
-        height: 65vh;
+      height: 65vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #form_container {
+        width: 80%;
+        background-color: white;
+        height: 90%;
+        border-radius: 10px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
-        #form_container {
-            width: 80%;
-            background-color: white;
-            height: 90%;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            input {
-                width: 80%;
-                height: 5%;
-                border: none;
-                border-bottom: 2px solid #D3BB8C;
-                font-size: 15px;
-                color:  #1c3661ad;
-                font-weight: bold;
-                transition: all ease 0.3s;
-                &:focus {
-                    border: none;
-                    border-bottom: 2px solid #1c3661;
-                    color:  #1c3661;
-                    outline-width: 0;
-                    
-                }
-            }
-            textarea {
-                width: 80%;
-                height: 20%;
-                font-family: 'Raleway', sans-serif;
-                border: none;
-                border-bottom: 2px solid #D3BB8C;
-                font-size: 15px;
-                font-weight: bold;
-                transition: all ease 0.3s;
-                &:focus {
-                    border: none;
-                    border-bottom: 2px solid #1c3661;
-                    color:  #1c3661;
-                    outline-width: 0;
-                    
-                }
-            }
-            .button_gold {
-                width: 40%;
-                height: 10%;
-                border: none;
-                cursor: pointer;
-                margin-top: 0;
-                &:hover {
-                    color: #D3BB8C;
-                }
-                &:focus {
-                    border: none;
-                    
-                }
-            }
+        input {
+          width: 80%;
+          height: 5%;
+          border: none;
+          border-bottom: 2px solid #d3bb8c;
+          font-size: 15px;
+          color: #1c3661ad;
+          font-weight: bold;
+          transition: all ease 0.3s;
+          &:focus {
+            border: none;
+            border-bottom: 2px solid #1c3661;
+            color: #1c3661;
+            outline-width: 0;
+          }
         }
+        textarea {
+          width: 80%;
+          height: 20%;
+          font-family: "Raleway", sans-serif;
+          border: none;
+          border-bottom: 2px solid #d3bb8c;
+          font-size: 15px;
+          font-weight: bold;
+          transition: all ease 0.3s;
+          &:focus {
+            border: none;
+            border-bottom: 2px solid #1c3661;
+            color: #1c3661;
+            outline-width: 0;
+          }
+        }
+        .button_gold {
+          width: 40%;
+          height: 10%;
+          border: none;
+          cursor: pointer;
+          margin-top: 0;
+          &:hover {
+            color: #d3bb8c;
+          }
+          &:focus {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) and (orientation: portrait) {
+  #contact {
+      height: auto;
+    #contact_views {
+        display: flex;
+        flex-direction: column;
+      #form {
+        #form_container {
+            width: 95%;
+        }
+      }
     }
   }
 }
