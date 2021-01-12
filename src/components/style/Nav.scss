@@ -69,19 +69,26 @@ button {
   button {
   }
   #top_nav_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 8vh;
     #top_nav_logo {
       display: none;
     }
     img {
     }
     #topnav_hamburger_icon {
+      width: 8vh;
       height: 50px;
       span {
+        width: 80%;
       }
     }
   }
   #nav {
     .the-blur {
+      display: none;
     }
   }
 }

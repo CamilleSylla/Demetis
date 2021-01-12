@@ -98,6 +98,7 @@ export default function Nav() {
       document.getElementsByClassName("the-blur")[0].style.opacity = "0";
       document.getElementById("sidebar").style.transform = "translate(-20vw)";
       document.getElementById("nav").style.zIndex = "-1";
+      document.getElementById("nav").style.opacity = "0";
     } else {
       //Hamburger
       const hamburger = document.getElementById("topnav_hamburger_icon");
@@ -120,7 +121,8 @@ export default function Nav() {
       document.getElementsByClassName("the-blur")[0].style.zIndex = "10";
       document.getElementsByClassName("the-blur")[0].style.opacity = "1";
       document.getElementById("sidebar").style.transform = "translate(0)";
-      document.getElementById("nav").style.zIndex = "1";
+      document.getElementById("nav").style.zIndex = "4";
+      document.getElementById("nav").style.opacity = "1";
     }
   }, [hide]);
   return (
