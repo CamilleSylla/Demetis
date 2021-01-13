@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Text() {
-  const Sentence = "Un offre adapté,\n un rendement assuré !";
+  const Sentence = "Un audit détaillé,\n des préconisations adaptées";
   const pageVariant = {
     ini: {
       y: 0,

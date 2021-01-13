@@ -9,6 +9,8 @@ import { AnimatePresence } from "framer-motion";
 import { MenuProvider } from "./components/Context/MenuContext";
 import { NavProvider } from "./components/Context/NavContext";
 import Contact from "./components/Contact/Contact.js";
+import Footer from "./components/Footer/Footer";
+import FourOhFour from "./components/404/404";
 
 function App() {
   const location = useLocation;
@@ -26,10 +28,15 @@ function App() {
                       <Route path="/" exact component={Home} />
                       <Route path="/services" component={Main} />
                       <Route path="/contact" component={Contact} />
+                      <Route path='*'>
+                      <FourOhFour/>
+                    </Route>
                     </Switch>
+                    
                   </AnimatePresence>
                 )}
               />
+              <Footer/>
             </ServicesProvider>
           </TargetProvider>
         </NavProvider>

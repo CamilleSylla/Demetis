@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export default function Content() {
   const Content = {
-    title: "Discuton de votre projet... ",
+    title: "Discutons de votre projet ",
     title_2:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+      "Remplissez notre formulaire contact. \n Nous reviendrons vers vous dans les plus bref délais.",
     phone: "06 38 74 52 98",
     email: "navid.niktash@demetis.fr",
     adresse: {

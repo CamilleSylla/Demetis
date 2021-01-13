@@ -14,7 +14,7 @@ export default function Retraite() {
     title: "Préparer ma retraite",
     text:
       "D’après la DREES, Le taux de remplacement du dernier salaire d’un cadre est de 60% au jour de la retraite. \n\n Selon certaines projections, il pourrait passer à 45% pour la génération de salarié née à partir de 1977.",
-    text_2: "En ajoutant à cela un contexte démographique peu favorable :",
+    text_2: "En ajoutant à cela un contexte démographique peu favorable, avec un vieillissement de la population",
     desc:
       "D’après l’INSEE, en 2015 nous étions 16,2 millions de personnes âgés de plus de 60 ans en France",
     desc_2:
@@ -56,22 +56,33 @@ const pageTransition = {
       <div id="retraite">
         <div id="retraite_container">
           <div id="retraite_first">
-            <img src={Content.img} alt="Personnnes agés" />
+            
             <div>
               <h5>{Content.title}</h5>
               <p>{Content.text}</p>
+              <div>
+
+              <img src={Content.icons} alt="profile personne agé" />
+              </div>
+              <p>{Content.desc}</p>
+              <p>{Content.text_2}</p>
+              <div>
+
+              <img src={Content.icons_2} alt="croissance" />
+              </div>
+              <p>{Content.desc_2}</p>
+              <p >{Content.text_3}</p>
             </div>
           </div>
           <div id="retraite_second">
-            <p>{Content.text_2}</p>
+            
             <div id="retraite_details">
-              <img src={Content.icons} alt="profile personne agé" />
-              <p>{Content.desc}</p>
-              <img src={Content.icons_2} alt="croissance" />
-              <p>{Content.desc_2}</p>
+              
+              
+              
             </div>
           </div>
-          <p className="spacing-top">{Content.text_3}</p>
+          
         </div>
         <Link className="button_gold" to="/contact">
           Etre Contacté

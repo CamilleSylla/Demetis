@@ -19,6 +19,7 @@ export default function SideBar() {
         }}>
           <li>
             <NavLink
+            exact={true}
               to="/"
               activeStyle={{
                 fontWeight: "bold",
@@ -30,6 +31,7 @@ export default function SideBar() {
           </li>
           <li>
             <NavLink
+            exact={true}
               to="/services"
               activeStyle={{
                 fontWeight: "bold",
@@ -41,6 +43,7 @@ export default function SideBar() {
           </li>
           <li>
             <NavLink
+            exact={true}
               to="/contact"
               activeStyle={{
                 fontWeight: "bold",

@@ -7,7 +7,6 @@ export default function Bio () {
     return(
         <div id="bio">
             <Text/>
-            <Img/>
         </div>
     )
 }

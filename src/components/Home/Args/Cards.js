@@ -32,7 +32,6 @@ export default function Cards() {
                 <img src={details.img} alt={details.title}/>
               <div>
                 <h2>{details.title}</h2>
-                <p>{details.desc}</p>
               </div>
             </div>
           );
