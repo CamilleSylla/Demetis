@@ -9,6 +9,7 @@ export default function SideBar() {
   const Content = {
     logo: GoldBack,
   };
+  
 
   return (
     <div id="sidebar">

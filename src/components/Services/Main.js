@@ -12,7 +12,8 @@ import Transmission from "./Layers/Transmission";
 import Tresorerie from "./Layers/Tresorerie";
 import { motion } from "framer-motion";
 import { NavContext } from "../Context/NavContext";
-import { useLocation } from "react-router-dom";
+
+import UpArrow from '../../assets/Icons/arrowBlue.svg'
 
 export default function Main() {
   const [show, setShow] = useContext(ServicesContext);
@@ -67,6 +68,10 @@ const pageTransition = {
 useEffect(() => {
   setLogoSelect(0);
 },[])
+function Down () {
+  const elmnt = document.getElementById("services_page");
+  elmnt.scrollIntoView({ behavior: "smooth" });
+}
   return (
     <motion.div
       exit="out"
@@ -76,6 +81,7 @@ useEffect(() => {
       transition={pageTransition}
     >
       <div>
+      <img id="up_arrow" src={UpArrow} alt="Menu" onClick={Down}/>
         <Services />
         <AnimatePresence exitBeforeEnter>
           <div id="services_all">{toShow()}</div>

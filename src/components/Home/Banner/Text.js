@@ -23,6 +23,11 @@ export default function Text() {
     ease: "easeOut",
     duration: 1,
   };
+
+  function Down () {
+    const elmnt = document.getElementById("args");
+    elmnt.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <div id="banner_title_container">
       <div id="banner_text">
@@ -50,7 +55,7 @@ export default function Text() {
             Être contacté
           </Link>
         </div>
-        <img id="down_arrow"src={Arrow} alt="Continuer" />
+        <img id="down_arrow"src={Arrow} alt="Continuer" onClick={Down}/>
       </div>
     </div>
   );

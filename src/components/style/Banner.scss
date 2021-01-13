@@ -34,6 +34,9 @@
         margin-top: 2%;
         animation : updown 2s infinite;
         cursor: pointer;
+        &:hover {
+          animation : none;
+        }
         @keyframes updown {
           from {
             transform: rotate(90deg) translateX(0px);
