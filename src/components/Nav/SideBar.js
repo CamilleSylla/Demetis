@@ -9,17 +9,19 @@ export default function SideBar() {
   const Content = {
     logo: GoldBack,
   };
-  
 
   return (
     <div id="sidebar">
       <div id="sidebar_content">
-        <div id="sidebar_link" onClick={() => {
-          setHide(!hide)
-        }}>
+        <div
+          id="sidebar_link"
+          onClick={() => {
+            setHide(!hide);
+          }}
+        >
           <li>
             <NavLink
-            exact={true}
+              exact={true}
               to="/"
               activeStyle={{
                 fontWeight: "bold",
@@ -31,7 +33,7 @@ export default function SideBar() {
           </li>
           <li>
             <NavLink
-            exact={true}
+              exact={true}
               to="/services"
               activeStyle={{
                 fontWeight: "bold",
@@ -43,7 +45,7 @@ export default function SideBar() {
           </li>
           <li>
             <NavLink
-            exact={true}
+              exact={true}
               to="/contact"
               activeStyle={{
                 fontWeight: "bold",

@@ -90,6 +90,7 @@ and (max-width:800px)
 and (orientation : portrait) {
   #bio {
     height: auto;
+    overflow: hidden;
     #bio_container {#bio_content {
       margin-top: 5%;
       margin-bottom: 5%;

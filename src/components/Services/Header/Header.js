@@ -24,17 +24,16 @@ export default function Text() {
   };
   return (
     <div className="motion_services">
-<motion.div
-      exit="out"
-      initial="in"
-      animate="ini"
-      variants={pageVariant}
-      transition={pageTransition}
-      className="motion_text"
-    >
-      <h4 className="page_title">{Sentence}</h4>
-    </motion.div>
+      <motion.div
+        exit="out"
+        initial="in"
+        animate="ini"
+        variants={pageVariant}
+        transition={pageTransition}
+        className="motion_text"
+      >
+        <h4 className="page_title">{Sentence}</h4>
+      </motion.div>
     </div>
-    
   );
 }

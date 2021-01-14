@@ -28,15 +28,14 @@ function App() {
                       <Route path="/" exact component={Home} />
                       <Route path="/services" component={Main} />
                       <Route path="/contact" component={Contact} />
-                      <Route path='*'>
-                      <FourOhFour/>
-                    </Route>
+                      <Route path="*">
+                        <FourOhFour />
+                      </Route>
                     </Switch>
-                    
                   </AnimatePresence>
                 )}
               />
-              <Footer/>
+              <Footer />
             </ServicesProvider>
           </TargetProvider>
         </NavProvider>

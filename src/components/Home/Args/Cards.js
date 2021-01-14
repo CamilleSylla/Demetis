@@ -28,8 +28,8 @@ export default function Cards() {
       <div id="args_cards_grid">
         {Content.map((details, i) => {
           return (
-            <div className="args_cards">
-                <img src={details.img} alt={details.title}/>
+            <div className="args_cards" key={i}>
+              <img src={details.img} alt={details.title} />
               <div>
                 <h2>{details.title}</h2>
               </div>

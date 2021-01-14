@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "../style/Nav.scss";
 import SideBar from "./SideBar";
 import LogoBlueBack from "../../assets/Logos/BlueBack.svg";
@@ -68,10 +68,12 @@ export default function Nav() {
     }
   }
 
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
   useEffect(() => {
-    window.onscroll = function () {
-      scrollFunction();
-    };
+    
 
     if (hide === true) {
       //Hamburger
@@ -126,7 +128,7 @@ export default function Nav() {
     }
   }, [hide]);
   return (
-    <div>
+    <div >
       <div id="top_nav_container">
         <a
           id="topnav_hamburger_icon"

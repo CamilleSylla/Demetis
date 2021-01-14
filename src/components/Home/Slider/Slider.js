@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Agreas from "../../../assets/Partners/agreas.svg";
 import Bnp from "../../../assets/Partners/bnp.svg";
 import Aviva from "../../../assets/Partners/aviva.svg";
@@ -75,37 +75,33 @@ export default function Slider() {
             variants={pageVariant}
             transition={pageTransition}
             className="slider_width"
-          > <div id="slider_element">
-          <img src={details.img} alt={details.alt} />
-        </div></motion.div>
-         
+            key={i}
+          >
+            {" "}
+            <div id="slider_element">
+              <img src={details.img} alt={details.alt} />
+            </div>
+          </motion.div>
         );
       }
     });
   }
-  function AutoPlay () {
-      const Break = Content.length 
-      console.log(Break, Break );
-      if (slide.max < Content.length -1) {
-        setSlide({
-            ...slide,
-            max: slide.max + 3,
-            min: slide.min + 3,
-          })
-      } else {
-        setSlide({
-            ...slide,
-            max: 2,
-            min: 0,
-          })
-      }
-      
-  
+  function AutoPlay() {
+    if (slide.max < Content.length - 1) {
+      setSlide({
+        ...slide,
+        max: slide.max + 3,
+        min: slide.min + 3,
+      });
+    } else {
+      setSlide({
+        ...slide,
+        max: 2,
+        min: 0,
+      });
+    }
   }
-  setTimeout(
-    AutoPlay,
-      6000
-    );
+  setTimeout(AutoPlay, 6000);
 
   return <div id="slider">{SliderLogo()}</div>;
 }

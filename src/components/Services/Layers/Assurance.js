@@ -58,26 +58,25 @@ export default function Assurance() {
       variants={pageVariant}
       transition={pageTransition}
     >
-<div id="assurance">
-      <div id="assurance_container">
-        <img id="parapluie" src={Content.side} alt="Parapluie" />
-        <div id="assurance_content">
-          <h5>{Content.title}</h5>
-          {Content.content.map((details, i) => {
-            return (
-              <div className="assurance_cards">
-                <img src={details.img} />
-                <p>{details.text}</p>
-              </div>
-            );
-          })}
-          <Link className="button_gold" to="/contact">
-            Etre Contacté
-          </Link>
+      <div id="assurance">
+        <div id="assurance_container">
+          <img id="parapluie" src={Content.side} alt="Parapluie" />
+          <div id="assurance_content">
+            <h5>{Content.title}</h5>
+            {Content.content.map((details, i) => {
+              return (
+                <div className="assurance_cards">
+                  <img src={details.img} />
+                  <p>{details.text}</p>
+                </div>
+              );
+            })}
+            <Link className="button_gold" to="/contact">
+              Etre Contacté
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
     </motion.div>
-    
   );
 }

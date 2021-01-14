@@ -36,17 +36,21 @@ export default function Cards() {
       target: 4,
     },
   ];
-  
+
   return (
     <div id="services_cards_container">
       {Content.map((details, i) => {
         return (
-          <Link to="/services">
+          <Link to="/services" key={i}>
             <div
               className="services_cards"
               onClick={() => setShow({ ...show, component: details.target })}
             >
-              <img className="banner_services_icons" src={details.img} alt="icons" />
+              <img
+                className="banner_services_icons"
+                src={details.img}
+                alt="icons"
+              />
               <p className="card_title">{details.categorie}</p>
               <p className="card_text">{details.desc}</p>
               <img id="fleche" src={Arrow} alt="fleche" />

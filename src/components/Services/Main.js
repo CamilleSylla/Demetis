@@ -13,11 +13,11 @@ import Tresorerie from "./Layers/Tresorerie";
 import { motion } from "framer-motion";
 import { NavContext } from "../Context/NavContext";
 
-import UpArrow from '../../assets/Icons/arrowBlue.svg'
+import UpArrow from "../../assets/Icons/arrowBlue.svg";
 
 export default function Main() {
   const [show, setShow] = useContext(ServicesContext);
-  const [logoSelect, setLogoSelect] = useContext(NavContext)
+  const [logoSelect, setLogoSelect] = useContext(NavContext);
   const Components = [
     <Fisc />,
     <Retraite />,
@@ -51,27 +51,27 @@ export default function Main() {
   }
   const pageVariant = {
     ini: {
-        opacity: 1
+      opacity: 1,
     },
     out: {
-        opacity: 0
+      opacity: 0,
     },
     in: {
-        opacity: 0
-    }
-}
-const pageTransition = {
+      opacity: 0,
+    },
+  };
+  const pageTransition = {
     type: "tween",
-    ease:"easeOut",
-    duration: .4,
-}
-useEffect(() => {
-  setLogoSelect(0);
-},[])
-function Down () {
-  const elmnt = document.getElementById("services_page");
-  elmnt.scrollIntoView({ behavior: "smooth" });
-}
+    ease: "easeOut",
+    duration: 0.4,
+  };
+  useEffect(() => {
+    setLogoSelect(0);
+  }, []);
+  function Down() {
+    const elmnt = document.getElementById("services_page");
+    elmnt.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <motion.div
       exit="out"
@@ -81,7 +81,7 @@ function Down () {
       transition={pageTransition}
     >
       <div>
-      <img id="up_arrow" src={UpArrow} alt="Menu" onClick={Down}/>
+        <img id="up_arrow" src={UpArrow} alt="Menu" onClick={Down} />
         <Services />
         <AnimatePresence exitBeforeEnter>
           <div id="services_all">{toShow()}</div>

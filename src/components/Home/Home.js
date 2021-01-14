@@ -8,9 +8,9 @@ import { NavContext } from "../Context/NavContext";
 import Slider from "./Slider/Slider";
 
 export default function Home() {
-
-  const [logoSelect, setLogoSelect] = useContext(NavContext)
   
+  const [ logoSelect, setLogoSelect ] = useContext(NavContext);
+ 
   const pageVariant = {
     ini: {
       opacity: 1,
@@ -28,8 +28,8 @@ export default function Home() {
     duration: 0.4,
   };
   useEffect(() => {
-    setLogoSelect(1)
-  })
+    setLogoSelect(1);
+  });
   return (
     <motion.div
       exit="out"
@@ -38,12 +38,12 @@ export default function Home() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div>
+      <div id="home_container">
         <Banner />
         <Args />
         <Services />
         <Bio />
-        <Slider/>
+        <Slider />
       </div>
     </motion.div>
   );

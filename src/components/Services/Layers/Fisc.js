@@ -1,35 +1,35 @@
 import React from "react";
 import "../../style/Fisc.scss";
 import Arrow from "../../../assets/Icons/ArrowLongGold.svg";
-import Family from '../../../assets/Icons/family.svg'
+import Family from "../../../assets/Icons/family.svg";
 // import Handshake from '../../../assets/Icons/Handshake.svg'
-import Routes from '../../../assets/Icons/Routes.svg'
-import Taxes from '../../../assets/Icons/taxes.svg'
+import Routes from "../../../assets/Icons/Routes.svg";
+import Taxes from "../../../assets/Icons/taxes.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Fisc() {
   const pageVariant = {
     ini: {
-        y: 0,
-        x: 0,
-        opacity: 1
+      y: 0,
+      x: 0,
+      opacity: 1,
     },
     out: {
-        x: "100vh",
-        opacity: 0
+      x: "100vh",
+      opacity: 0,
     },
     in: {
-        x: "-100vw",
-        opacity: 0
-    }
-}
-const pageTransition = {
+      x: "-100vw",
+      opacity: 0,
+    },
+  };
+  const pageTransition = {
     type: "tween",
-    ease:"easeOut",
-    duration: .4,
-    delay: 0.4
-}
+    ease: "easeOut",
+    duration: 0.4,
+    delay: 0.4,
+  };
   return (
     <motion.div
       exit="out"
@@ -67,7 +67,6 @@ const pageTransition = {
                 <img src={Routes} alt="ID" />
                 <p>Nos préconisations</p>
               </div>
-              
             </div>
             <p>Il est donc nécessaire de procéder à un audit en amont.</p>
             <Link className="button_gold" to="/contact">

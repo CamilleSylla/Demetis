@@ -40,7 +40,7 @@ export default function Footer() {
           <tr>
             {Content.titles.map((titles, i) => {
               return (
-                <th>
+                <th key={i}>
                   <p className="footer_title">{titles}</p>
                 </th>
               );
@@ -50,9 +50,9 @@ export default function Footer() {
             <th>
               {Content.explore.map((infos, i) => {
                 return (
-                  <tr>
+                  <tr key={i}>
                     <NavLink
-                    exact={true}
+                      exact={true}
                       to={infos.path}
                       activeStyle={{
                         fontWeight: "bold",
@@ -75,7 +75,7 @@ export default function Footer() {
             </th>
             <th className="footer_font footer_links">
               {Content.social.map((social, i) => {
-                return <a href={social.link}>{social.title}</a>;
+                return <a href={social.link} key={i}>{social.title}</a>;
               })}
             </th>
           </tr>

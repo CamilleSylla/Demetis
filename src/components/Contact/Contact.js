@@ -31,7 +31,7 @@ export default function Contact() {
       <div id="contact">
         <div id="contact_views">
           <Content />
-          <Form/>
+          <Form />
         </div>
       </div>
     </motion.div>

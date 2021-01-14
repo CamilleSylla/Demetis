@@ -1,14 +1,14 @@
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext } from "react";
 
 export const TargetContext = createContext();
 
 export function TargetProvider(props) {
-    const [menu, setMenu] = useState({
-        target: null,
-      })
-    return (
-        <TargetContext.Provider value={[menu, setMenu]}>
-            {props.children}
-        </TargetContext.Provider>
-    );
+  const [menu, setMenu] = useState({
+    target: null,
+  });
+  return (
+    <TargetContext.Provider value={[menu, setMenu]}>
+      {props.children}
+    </TargetContext.Provider>
+  );
 }
