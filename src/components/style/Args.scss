@@ -57,13 +57,16 @@ and (orientation : portrait) {
         #args_cards_container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             margin-top: 5%;
             margin-bottom: 5%;
             #args_cards_grid {
-                width: 75%;
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
                 .args_cards {
+                    width: 80%;
+                    display: flex;
+                    justify-content: left;
                     margin-top: 5%;
                     margin-bottom: 5%;
                     img {
@@ -72,6 +75,8 @@ and (orientation : portrait) {
             }
         }
         #args_sentence {
+            text-align: center;
+            width: 100%;
         }
     }
 }

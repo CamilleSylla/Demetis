@@ -9,7 +9,7 @@ export default function Text() {
   };
   return (
     <div id="service_title">
-      <h4 className="banner_text_slogan">{Content.title}</h4>
+      <h4 className="page_title">{Content.title}</h4>
       <p>{Content.desc} </p>
       <Link className="button_gold" to="/services">
         Tous nos services

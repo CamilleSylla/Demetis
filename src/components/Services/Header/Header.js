@@ -32,7 +32,7 @@ export default function Text() {
       transition={pageTransition}
       className="motion_text"
     >
-      <h4 className="banner_text_slogan_services">{Sentence}</h4>
+      <h4 className="page_title">{Sentence}</h4>
     </motion.div>
     </div>
     

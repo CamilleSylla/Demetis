@@ -41,9 +41,9 @@ export default function Text() {
             transition={pageTransition}
             className="motion_text"
           >
-            <h4 className="banner_text_slogan">
+            <p className="page_title">
               Ensemble, <br /> réinventons la gestion <br /> de patrimoine
-            </h4>
+            </p>
           </motion.div>
         </div>
         <h1 id="banner_title">Cabinet de conseil en gestion de patrimoine</h1>

@@ -45,8 +45,8 @@ export default function Cards() {
           >
             <img src={details.img} alt="icons" />
             <div>
-              <h5>{details.title}</h5>
-              <p>{details.content}</p>
+              <p className="card_title">{details.title}</p>
+              <p className="card_text">{details.content}</p>
             </div>
           </div>
         );

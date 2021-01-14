@@ -13,6 +13,8 @@ p {
   color: white;
   transition: all ease 0.3s;
   white-space: pre-line;
+  font-weight: 500;
+  
 }
 h3 {
   width: 75%;
@@ -25,13 +27,19 @@ h3 {
 a {
   text-decoration: none;
 }
-.banner_text_slogan {
+.page_title {
   font-size: 50px;
   color: white;
   font-weight: bolder;
   width: 80%;
   margin: 0;
   font-weight: 800;
+  white-space: pre-line;
+}
+.card_title {
+  color: #1c3661;
+  font-weight: 700;
+  font-size: 20px;
 }
 .button_white {
   border: 2px solid white;
@@ -91,13 +99,7 @@ and (orientation : portrait) {
   h2 {
     font-size: 5vw;
   }
-  p {
-  }
-  h3 {
-  }
-  a {
-  }
-  .banner_text_slogan {
+  .page_title {
     font-size: 12vw;
     width: 100%;
     text-align: center;

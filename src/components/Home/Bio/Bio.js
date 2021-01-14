@@ -6,7 +6,9 @@ export default function Bio () {
 
     return(
         <div id="bio">
+            <div id="bio_container">
             <Text/>
+            </div>
         </div>
     )
 }
