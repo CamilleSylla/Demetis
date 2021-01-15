@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Navid from "../../../assets/Img/Navid.png";
+import { NavContext } from "../../Context/NavContext";
+import Logo from '../../../assets/Logos/LogoWhiteBG.svg'
 
 export default function Text() {
+  const [logoSelect, setLogoSelect] = useContext(NavContext);
+
   const Content = {
     title: "Qui sommes nous ?",
     text:
@@ -16,12 +20,13 @@ export default function Text() {
           <img src={Content.img} alt="Navid Niktash" />
           <h1>Navid Niktash</h1>
           <p>Directeur Général</p>
+          <img id="bio_logo" src={Logo} alt="Demetis"/>
         </div>
       </div>
       <div id="bio_content_text">
         <h2>{Content.title}</h2>
         <p>{Content.text}</p>
-        <Link className="button_gold" to="/services">
+        <Link className="button_gold" to="/services" onClick={() => setLogoSelect(0)}>
           Nos Prestations
         </Link>
       </div>

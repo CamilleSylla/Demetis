@@ -58,10 +58,8 @@ export default function Assurance() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div id="assurance">
-        <div id="assurance_container">
-          <img id="parapluie" src={Content.side} alt="Parapluie" />
-          <div id="assurance_content">
+      <div className="layer_container">
+          <div className="layer_content">
             <h5>{Content.title}</h5>
             {Content.content.map((details, i) => {
               return (
@@ -75,7 +73,6 @@ export default function Assurance() {
               Etre Contacté
             </Link>
           </div>
-        </div>
       </div>
     </motion.div>
   );

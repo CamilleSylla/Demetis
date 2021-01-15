@@ -40,9 +40,8 @@ export default function Capital() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div id="capital">
-        <div id="capital_container">
-          <img src={Content.img} alt="appartement" />
+      <div className="layer_container">
+          <div className="layer_content">
           <h5>{Content.title}</h5>
           <p>{Content.text}</p>
           <Link className="button_gold" to="/contact">

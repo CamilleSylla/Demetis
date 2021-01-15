@@ -44,15 +44,12 @@ export default function Transmission() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div id="transmission">
-        <div id="transmission_container">
+      <div className="layer_container">
+          <div className="layer_content">
           <h5>{Content.title}</h5>
           <p>{Content.text_1}</p>
-          <div id="transmissison_grid">
             <p>{Content.text_2}</p>
-            <img src={Content.img} alt="Famille" />
             <p>{Content.text_3}</p>
-          </div>
           <Link className="button_gold" to="/contact">
             Etre Contacté
           </Link>

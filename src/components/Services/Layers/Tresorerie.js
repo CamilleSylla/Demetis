@@ -43,12 +43,11 @@ export default function Tresorerie() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div id="tresorerie">
-        <div id="tresorerie_container">
+      <div className="layer_container">
+          <div className="layer_content">
           <h5>{Content.title}</h5>
           <p>{Content.text_1}</p>
           <p id="merge">{Content.text_2}</p>
-          <img src={Content.img} alt="graphique" />
           <Link className="button_gold" to="/contact">
             Etre Contacté
           </Link>

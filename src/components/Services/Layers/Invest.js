@@ -40,18 +40,14 @@ export default function Invest() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div id="invest">
-        <div id="invest_container">
-          <div id="spacer"></div>
-          <img src={Content.img} alt="Maison" />
-          <div id="invest_text">
+      <div className="layer_container">
+          <div className="layer_content">
             <h5>{Content.title}</h5>
             <p>{Content.text}</p>
             <Link className="button_gold" to="/contact">
               Etre Contacté
             </Link>
           </div>
-        </div>
       </div>
     </motion.div>
   );

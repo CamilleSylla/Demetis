@@ -15,7 +15,6 @@ export default function Nav() {
 
   const Logos = [LogoWhiteBG, LogoBlueBG];
   const location = useLocation();
-  console.log(location.pathname);
   function scrollFunction() {
     const hamburger = document.getElementById("topnav_hamburger_icon");
     if (location.pathname === "/services") {
@@ -29,6 +28,7 @@ export default function Nav() {
 
         document.getElementById("top_nav_logo").style.maxHeight = "50px";
         setLogoSelect(1);
+        console.log(document.getElementById('up_arrow'));
         for (let i = 0; i <= 2; i++) {
           const bar = hamburger.getElementsByTagName("span");
           bar[i].style.backgroundColor = "white";

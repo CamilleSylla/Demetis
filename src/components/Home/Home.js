@@ -28,6 +28,7 @@ export default function Home() {
     duration: 0.4,
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
     setLogoSelect(1);
   });
   return (

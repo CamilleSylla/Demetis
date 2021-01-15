@@ -42,7 +42,7 @@ export default function FourOhFour() {
       <div id="four_container">
         <img src={Content.img} alt="Demetis" />
         <span>404</span>
-        <h6>Oups, La page que vous cherchez n'existe pas...</h6>
+        <h6>Oups, la page que vous cherchez n'existe pas...</h6>
         <p>{Content.text}</p>
         <div id="four_menu">
           {Content.explore.map((infos, i) => {

@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 200;
   .page_title {
     color: #1c3661;
     margin-bottom: 7vh;
@@ -16,8 +17,8 @@ and (orientation : portrait) {
   #services_page {
     width: 100%;
     height: auto;
-    .banner_text_slogan_services {
-      font-size: 12vw;
+    .page_title {
+      margin-top: 20%;
     width: 100%;
     text-align: center;
     }

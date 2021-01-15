@@ -1,13 +1,11 @@
 #up_arrow {
-  position: fixed;
-  bottom: 0;
-  right: 0;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-left: 20px;
   transform: rotate(-90deg);
   z-index: 2;
   cursor: pointer;
   animation : goUp 2s infinite;
+  transition: all ease 0.3s;
   @keyframes goUp {
     from {
       transform: rotate(-90deg) translateX(0px);
@@ -18,6 +16,43 @@
     }
   }
 }
+.layer_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+      .layer_content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      width: 50%;
+      margin-bottom: 15%;
+      color: #1c3661;
+      h5 {
+        font-size: 34px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 20px;
+        color: #1c3661;
+      }
+      img {
+        width: 10%;
+      }
+      #fisc_content_text_icon {
+        div {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+        
+      }
+      }
+    }
 #services {
   width: 100%;
   height: 80vh;

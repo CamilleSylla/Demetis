@@ -2,7 +2,6 @@ import React from "react";
 import "../../style/Fisc.scss";
 import Arrow from "../../../assets/Icons/ArrowLongGold.svg";
 import Family from "../../../assets/Icons/family.svg";
-// import Handshake from '../../../assets/Icons/Handshake.svg'
 import Routes from "../../../assets/Icons/Routes.svg";
 import Taxes from "../../../assets/Icons/taxes.svg";
 import { Link } from "react-router-dom";
@@ -38,9 +37,8 @@ export default function Fisc() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div id="fisc">
-        <div id="fisc_content">
-          <div id="fisc_content_text">
+      <div className="layer_container">
+          <div className="layer_content">
             <h5>Reduire mes impôts</h5>
             <p>
               Il existe plusieurs dispositifs permettant de payer moins
@@ -54,14 +52,14 @@ export default function Fisc() {
                 <p>Votre situation civile</p>
               </div>
               <div>
-                <img src={Arrow} alt="ID" />
+                <img className="gold_arrow" src={Arrow} alt="ID" />
               </div>
               <div>
                 <img src={Taxes} alt="ID" />
                 <p>Votre situation fiscale</p>
               </div>
               <div>
-                <img src={Arrow} alt="ID" />
+                <img className="gold_arrow" src={Arrow} alt="ID" />
               </div>
               <div>
                 <img src={Routes} alt="ID" />
@@ -73,7 +71,6 @@ export default function Fisc() {
               Etre contacté
             </Link>
           </div>
-        </div>
       </div>
     </motion.div>
   );

@@ -13,7 +13,7 @@ export default function Retraite() {
     icons_2: Grow,
     title: "Préparer ma retraite",
     text:
-      "D’après la DREES, Le taux de remplacement du dernier salaire d’un cadre est de 60% au jour de la retraite. \n\n Selon certaines projections, il pourrait passer à 45% pour la génération de salarié née à partir de 1977.",
+      "D’après la DREES, Le taux de remplacement du dernier salaire d’un cadre est de 60% au jour de la retraite. \n Selon certaines projections, il pourrait passer à 45% pour la génération de salarié née à partir de 1977.",
     text_2:
       "En ajoutant à cela un contexte démographique peu favorable, avec un vieillissement de la population",
     desc:
@@ -53,31 +53,19 @@ export default function Retraite() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div id="retraite">
-        <div id="retraite_container">
-          <div id="retraite_first">
-            <div>
-              <h5>{Content.title}</h5>
-              <p>{Content.text}</p>
-              <div>
-                <img src={Content.icons} alt="profile personne agé" />
-              </div>
-              <p>{Content.desc}</p>
-              <p>{Content.text_2}</p>
-              <div>
-                <img src={Content.icons_2} alt="croissance" />
-              </div>
-              <p>{Content.desc_2}</p>
-              <p>{Content.text_3}</p>
-            </div>
-          </div>
-          <div id="retraite_second">
-            <div id="retraite_details"></div>
-          </div>
+      <div className="layer_container">
+        <div className="layer_content">
+          <h5>{Content.title}</h5>
+          <p>{Content.text}</p>
+          <img src={Content.icons} alt="profile personne agé" />
+          <p>{Content.text_2}. {Content.desc}</p>
+          <img src={Content.icons_2} alt="croissance" />
+          <p>{Content.desc_2}</p>
+          <p>{Content.text_3}</p>
+          <Link className="button_gold" to="/contact">
+            Etre Contacté
+          </Link>
         </div>
-        <Link className="button_gold" to="/contact">
-          Etre Contacté
-        </Link>
       </div>
     </motion.div>
   );

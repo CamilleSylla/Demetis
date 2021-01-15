@@ -40,17 +40,14 @@ export default function Epargne() {
       variants={pageVariant}
       transition={pageTransition}
     >
-      <div id="epargne">
-        <div id="epargne_container">
-          <img src={Content.img} alt="billet" />
-          <div id="epargne_content">
+      <div className="layer_container">
+          <div className="layer_content">
             <h5>{Content.title}</h5>
             <p>{Content.text}</p>
             <Link className="button_gold" to="/contact">
               Etre Contacté
             </Link>
           </div>
-        </div>
       </div>
     </motion.div>
   );

@@ -66,6 +66,7 @@ export default function Main() {
     duration: 0.4,
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
     setLogoSelect(0);
   }, []);
   function Down() {
@@ -81,10 +82,11 @@ export default function Main() {
       transition={pageTransition}
     >
       <div>
-        <img id="up_arrow" src={UpArrow} alt="Menu" onClick={Down} />
+        
         <Services />
         <AnimatePresence exitBeforeEnter>
           <div id="services_all">{toShow()}</div>
+          <img id="up_arrow" src={UpArrow} alt="Menu" onClick={Down} />
         </AnimatePresence>
       </div>
     </motion.div>
