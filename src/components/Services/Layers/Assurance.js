@@ -7,7 +7,7 @@ import Para from "../../../assets/Img/para.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export default function Assurance() {
+export default function Assurance({setSubject}) {
   const Content = {
     title: "Solutions d’assurance",
     side: Para,
@@ -69,7 +69,7 @@ export default function Assurance() {
                 </div>
               );
             })}
-            <Link className="button_gold" to="/contact">
+            <Link className="button_gold" to="/contact" onClick={()=> setSubject({value: Content.title})}>
               Etre Contacté
             </Link>
           </div>

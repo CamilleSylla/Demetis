@@ -14,19 +14,21 @@ import { motion } from "framer-motion";
 import { NavContext } from "../Context/NavContext";
 
 import UpArrow from "../../assets/Icons/arrowBlue.svg";
+import { ContactContext } from "../Context/ContactContext";
 
 export default function Main() {
   const [show, setShow] = useContext(ServicesContext);
   const [logoSelect, setLogoSelect] = useContext(NavContext);
+  const [subject, setSubject] = useContext(ContactContext)
   const Components = [
-    <Fisc />,
-    <Retraite />,
-    <Capital />,
-    <Epargne />,
-    <Invest />,
-    <Assurance />,
-    <Transmission />,
-    <Tresorerie />,
+    <Fisc setSubject={setSubject}/>,
+    <Retraite setSubject={setSubject}/>,
+    <Capital setSubject={setSubject}/>,
+    <Epargne setSubject={setSubject}/>,
+    <Invest setSubject={setSubject}/>,
+    <Assurance setSubject={setSubject}/>,
+    <Transmission setSubject={setSubject}/>,
+    <Tresorerie setSubject={setSubject}/>,
   ];
 
   function toShow() {

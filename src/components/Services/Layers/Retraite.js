@@ -6,7 +6,7 @@ import Grow from "../../../assets/Icons/grow.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export default function Retraite() {
+export default function Retraite({setSubject}) {
   const Content = {
     img: Vieux,
     icons: Old,
@@ -62,7 +62,7 @@ export default function Retraite() {
           <img src={Content.icons_2} alt="croissance" />
           <p>{Content.desc_2}</p>
           <p>{Content.text_3}</p>
-          <Link className="button_gold" to="/contact">
+          <Link className="button_gold" to="/contact" onClick={()=> setSubject({value: Content.title})}>
             Etre Contacté
           </Link>
         </div>

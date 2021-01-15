@@ -12,6 +12,7 @@ export default function Slider() {
   const [slide, setSlide] = useState({
     min: 0,
     max: 2,
+    acc: 0,
   });
   const Content = [
     {
@@ -65,8 +66,8 @@ export default function Slider() {
     duration: 1,
   };
   function SliderLogo() {
-    return Content.map((details, i) => {
-      while (i >= slide.min && i <= slide.max) {
+    if (window.innerWidth < 800) {
+      while (slide.acc <= Content.length - 1) {
         return (
           <motion.div
             exit="out"
@@ -75,30 +76,61 @@ export default function Slider() {
             variants={pageVariant}
             transition={pageTransition}
             className="slider_width"
-            key={i}
+            key={slide.acc}
           >
             {" "}
             <div id="slider_element">
-              <img src={details.img} alt={details.alt} />
+              <img src={Content[slide.acc].img} alt={Content[slide.acc].alt} />
             </div>
           </motion.div>
         );
       }
-    });
+    } else {
+      return Content.map((details, i) => {
+        while (i >= slide.min && i <= slide.max) {
+          return (
+            <motion.div
+              exit="out"
+              initial="in"
+              animate="ini"
+              variants={pageVariant}
+              transition={pageTransition}
+              className="slider_width"
+              key={i}
+            >
+              {" "}
+              <div id="slider_element">
+                <img src={details.img} alt={details.alt} />
+              </div>
+            </motion.div>
+          );
+        }
+      });
+    }
   }
   function AutoPlay() {
-    if (slide.max < Content.length - 1) {
-      setSlide({
-        ...slide,
-        max: slide.max + 3,
-        min: slide.min + 3,
-      });
+    if (window.innerWidth < 800) {
+      if (slide.acc < Content.length - 1) {
+        setSlide({ ...slide, acc: slide.acc + 1 });
+      }else {
+        setSlide({ ...slide, acc: 0 });
+      }
     } else {
-      setSlide({
-        ...slide,
-        max: 2,
-        min: 0,
-      });
+      if (slide.max < Content.length - 1) {
+        setSlide({
+          ...slide,
+          max: slide.max + 3,
+          min: slide.min + 3,
+          acc: slide.acc + 1,
+        });
+      } else {
+        setSlide({
+          ...slide,
+          max: 2,
+          min: 0,
+          acc: 0,
+        });
+      }
     }
   }
   setTimeout(AutoPlay, 6000);

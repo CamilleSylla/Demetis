@@ -4,7 +4,7 @@ import Grow from "../../../assets/Img/grow.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export default function Tresorerie() {
+export default function Tresorerie({setSubject}) {
   const Content = {
     title: "Optimiser la trésorerie de votre entreprise",
     text_1:
@@ -48,7 +48,7 @@ export default function Tresorerie() {
           <h5>{Content.title}</h5>
           <p>{Content.text_1}</p>
           <p id="merge">{Content.text_2}</p>
-          <Link className="button_gold" to="/contact">
+          <Link className="button_gold" to="/contact" onClick={()=> setSubject({value: Content.title})}>
             Etre Contacté
           </Link>
         </div>

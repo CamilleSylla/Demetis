@@ -27,3 +27,18 @@
     }
     
 }
+@media only screen 
+and (max-width:800px)
+and (orientation : portrait) {
+    #slider {
+        .slider_width{
+            #slider_element {
+                img {
+                    width: 50vw;
+                    height: 50vw;
+                }
+            }
+        }
+        
+    }
+}

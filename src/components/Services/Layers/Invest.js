@@ -4,7 +4,7 @@ import InvestImg from "../../../assets/Img/invest.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export default function Invest() {
+export default function Invest({setSubject}) {
   const Content = {
     title: "Investir dans l’immobilier",
     text:
@@ -44,7 +44,7 @@ export default function Invest() {
           <div className="layer_content">
             <h5>{Content.title}</h5>
             <p>{Content.text}</p>
-            <Link className="button_gold" to="/contact">
+            <Link className="button_gold" to="/contact" onClick={()=> setSubject({value: Content.title})}>
               Etre Contacté
             </Link>
           </div>

@@ -7,7 +7,7 @@ import Taxes from "../../../assets/Icons/taxes.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export default function Fisc() {
+export default function Fisc({setSubject}) {
   const pageVariant = {
     ini: {
       y: 0,
@@ -67,7 +67,7 @@ export default function Fisc() {
               </div>
             </div>
             <p>Il est donc nécessaire de procéder à un audit en amont.</p>
-            <Link className="button_gold" to="/contact">
+            <Link className="button_gold" to="/contact" onClick={()=> setSubject({value:"Réduire mes impots"})}>
               Etre contacté
             </Link>
           </div>

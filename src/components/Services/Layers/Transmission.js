@@ -4,7 +4,7 @@ import Transmi from "../../../assets/Img/Transmi.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export default function Transmission() {
+export default function Transmission({setSubject}) {
   const Content = {
     title: "Préparer votre transmission",
     text_1:
@@ -50,7 +50,7 @@ export default function Transmission() {
           <p>{Content.text_1}</p>
             <p>{Content.text_2}</p>
             <p>{Content.text_3}</p>
-          <Link className="button_gold" to="/contact">
+          <Link className="button_gold" to="/contact" onClick={()=> setSubject({value: Content.title})}>
             Etre Contacté
           </Link>
         </div>

@@ -4,7 +4,7 @@ import "../../style/Capital.scss";
 import CapitalImg from "../../../assets/Img/Capital.jpg";
 import { motion } from "framer-motion";
 
-export default function Capital() {
+export default function Capital({setSubject}) {
   const Content = {
     title: "Me constituer un capital",
     text:
@@ -44,7 +44,7 @@ export default function Capital() {
           <div className="layer_content">
           <h5>{Content.title}</h5>
           <p>{Content.text}</p>
-          <Link className="button_gold" to="/contact">
+          <Link className="button_gold" to="/contact" onClick={()=> setSubject({value: Content.title})}>
             Etre Contacté
           </Link>
         </div>

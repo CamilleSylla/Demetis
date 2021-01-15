@@ -11,6 +11,7 @@ import { NavProvider } from "./components/Context/NavContext";
 import Contact from "./components/Contact/Contact.js";
 import Footer from "./components/Footer/Footer";
 import FourOhFour from "./components/404/404";
+import { ContactProvider } from "./components/Context/ContactContext";
 
 function App() {
   const location = useLocation;
@@ -21,6 +22,7 @@ function App() {
           <Nav />
           <TargetProvider>
             <ServicesProvider>
+              <ContactProvider>
               <Route
                 render={({ location }) => (
                   <AnimatePresence exitBeforeEnter>
@@ -36,6 +38,7 @@ function App() {
                 )}
               />
               <Footer />
+              </ContactProvider>
             </ServicesProvider>
           </TargetProvider>
         </NavProvider>

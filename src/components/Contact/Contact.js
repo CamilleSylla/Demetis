@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../style/Contact.scss";
 import Content from "./Content";
 import { motion } from "framer-motion";
@@ -20,6 +20,9 @@ export default function Contact() {
     ease: "easeOut",
     duration: 0.4,
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
   return (
     <motion.div
       exit="out"

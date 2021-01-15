@@ -9,6 +9,9 @@ import LogoBlueBG from "../../assets/Logos/BlueBack.svg";
 import { NavContext } from "../Context/NavContext";
 import { Link, useLocation } from "react-router-dom";
 
+import IgW from "../../assets/Icons/Ig_White.svg";
+import LkW from "../../assets/Icons/Linkedin_white.svg";
+
 export default function Nav() {
   const [hide, setHide] = useContext(MenuContext);
   const [logoSelect, setLogoSelect] = useContext(NavContext);
@@ -22,18 +25,19 @@ export default function Nav() {
         document.body.scrollTop > 300 ||
         document.documentElement.scrollTop > 300
       ) {
+        document.getElementById("nav_contact").style.opacity = "1"
         document.getElementById("top_nav_container").style.maxHeight = "50px";
         document.getElementById("top_nav_container").style.backgroundColor =
           "#1c3661";
 
         document.getElementById("top_nav_logo").style.maxHeight = "50px";
         setLogoSelect(1);
-        console.log(document.getElementById('up_arrow'));
         for (let i = 0; i <= 2; i++) {
           const bar = hamburger.getElementsByTagName("span");
           bar[i].style.backgroundColor = "white";
         }
       } else {
+        document.getElementById("nav_contact").style.opacity = "0"
         document.getElementById("top_nav_container").style.maxHeight = "50px";
         document.getElementById("top_nav_container").style.backgroundColor =
           "transparent";
@@ -53,12 +57,14 @@ export default function Nav() {
         document.body.scrollTop > 300 ||
         document.documentElement.scrollTop > 300
       ) {
+        document.getElementById("nav_contact").style.opacity = "1"
         document.getElementById("top_nav_container").style.maxHeight = "50px";
         document.getElementById("top_nav_container").style.backgroundColor =
           "#1c3661";
         document.getElementById("top_nav_logo").style.maxHeight = "50px";
         setLogoSelect(1);
       } else {
+        document.getElementById("nav_contact").style.opacity = "0"
         document.getElementById("top_nav_container").style.maxHeight = "50px";
         document.getElementById("top_nav_container").style.backgroundColor =
           "transparent";
@@ -73,8 +79,6 @@ export default function Nav() {
   };
 
   useEffect(() => {
-    
-
     if (hide === true) {
       //Hamburger
       const hamburger = document.getElementById("topnav_hamburger_icon");
@@ -86,6 +90,7 @@ export default function Nav() {
         } else {
           bar[i].style.backgroundColor = "white";
         }
+        document.getElementById("nav_social").style.opacity = "1"
         bar[i].style.opacity = "1";
         bar[0].style.transform = "rotate(0deg)";
         bar[1].style.transform = "translateX(0px)";
@@ -103,6 +108,7 @@ export default function Nav() {
       document.getElementById("nav").style.opacity = "0";
     } else {
       //Hamburger
+      document.getElementById("nav_social").style.opacity = "0"
       const hamburger = document.getElementById("topnav_hamburger_icon");
       const middle = hamburger.getElementsByTagName("span")[1];
       hamburger.style.justifyContent = "center";
@@ -127,8 +133,14 @@ export default function Nav() {
       document.getElementById("nav").style.opacity = "1";
     }
   }, [hide]);
+
+  const Links = [
+    { icon: IgW, link: "https://www.instagram.com/demetisconseil/" },
+    { icon: LkW, link: "https://www.linkedin.com/in/navid-niktash-bb75b0179/" },
+  ];
+  const Text = "Audit Gratuit";
   return (
-    <div >
+    <div>
       <div id="top_nav_container">
         <a
           id="topnav_hamburger_icon"
@@ -140,8 +152,21 @@ export default function Nav() {
           <span id="mid"></span>
           <span id="bot"></span>
         </a>
+        <div id="nav_social">
+          {Links.map((links, i) => {
+            return (
+              <a href={links.link}>
+                <img src={links.icon} alt={links.link}/>
+              </a>
+            )
+          })}
+        </div>
+        
         <div id="top_nav_logo">
-            <img src={Logos[logoSelect]} alt="Demetis" />
+        <Link id="nav_contact" className="button_gold" to="/contact">
+          {Text}
+        </Link>
+          <img src={Logos[logoSelect]} alt="Demetis" />
         </div>
       </div>
 
