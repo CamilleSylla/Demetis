@@ -12,12 +12,14 @@ import { Link, useLocation } from "react-router-dom";
 import IgW from "../../assets/Icons/Ig_White.svg";
 import LkW from "../../assets/Icons/Linkedin_white.svg";
 
+
 export default function Nav() {
   const [hide, setHide] = useContext(MenuContext);
   const [logoSelect, setLogoSelect] = useContext(NavContext);
 
   const Logos = [LogoWhiteBG, LogoBlueBG];
   const location = useLocation();
+  
   function scrollFunction() {
     const hamburger = document.getElementById("topnav_hamburger_icon");
     if (location.pathname === "/services") {

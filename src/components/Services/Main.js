@@ -30,7 +30,7 @@ export default function Main() {
     <Transmission setSubject={setSubject}/>,
     <Tresorerie setSubject={setSubject}/>,
   ];
-
+  
   function toShow() {
     switch (show.component) {
       case 0:

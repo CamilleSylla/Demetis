@@ -12,7 +12,7 @@ import { ServicesContext } from "../../Context/ServicesContext";
 
 export default function Cards() {
   const [show, setShow] = useContext(ServicesContext);
-
+  const [active, setActive] = useState("FISCALITE");
   const CardsContent = [
     { title: "FISCALITE", content: "Réduire mes impôts", img: Fisc },
     { title: "RETRAITE", content: "Préparer ma retraite", img: Retraite },
@@ -28,20 +28,44 @@ export default function Cards() {
     },
   ];
 
-  function Target(e) {
+  function Target(e, tar) {
     setShow({ ...show, component: e });
     const elmnt = document.getElementById("services_all");
     elmnt.scrollIntoView({ behavior: "smooth" });
+    setActive(tar);
   }
 
+  function Active() {
+    const isActive = CardsContent.map((match, i) => {
+      if (match.title !== active) {
+        return (
+          document.getElementById(`${match.title}`).classList.remove("active_card")
+        );
+      } else if (match.title === active) {
+        return (
+          document.getElementById(`${active}`).classList.add("active_card")
+          );
+      } else {
+        return null;
+      }
+    });
+    return isActive;
+  }
+
+  useEffect(() => {
+    Active();
+  });
   return (
     <div id="cards_menu">
       {CardsContent.map((details, i) => {
         return (
           <div
             className="services_page_cards"
-            onClick={() => Target(i)}
+            onClick={() => {
+              Target(i, details.title);
+            }}
             key={details.title}
+            id={details.title}
           >
             <img src={details.img} alt="icons" />
             <div>
