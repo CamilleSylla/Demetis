@@ -14,15 +14,16 @@
     -webkit-backdrop-filter: blur(10px);
     #bio_content_container {
       background-color: rgba(white, 0.5);
-      height: 75%;
+      height: auto;
       width: 65%;
       border-radius: 10px;
       #bio_content {
         display: grid;
         position: relative;
         grid-template-columns: 5fr 3fr;
-        height: 100%;
+        height: auto;
         width: 100%;
+        
         background-clip: padding-box;
         box-shadow: 10px 10px 10px #1c366128;
         overflow: hidden;
@@ -36,7 +37,7 @@
           flex-direction: column;
           justify-content: center;
           text-align: left;
-          height: 100%;
+          height: auto;
           width: 80%;
           margin-right: 10%;
           margin-left: 10%;
@@ -48,6 +49,9 @@
           p {
             color: #1c3661;
             font-weight: 600;
+          }
+          a {
+            margin-bottom: 5%;
           }
         }
         .bio_content_img {
@@ -114,6 +118,9 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+        }
+        p {
+          text-align: justify;
         }
         .bio_content_img {
           img {

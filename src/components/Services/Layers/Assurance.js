@@ -1,5 +1,6 @@
 import React from "react";
-import "../../style/Assurance.scss";
+// import "../../style/Assurance.scss";
+import "../../style/ServicesPage.scss"
 import Bulle from "../../../assets/Icons/bulle.svg";
 import Eye from "../../../assets/Icons/eye.svg";
 import Shirt from "../../../assets/Icons/trophy.svg";

@@ -21,6 +21,11 @@
   #fisc_content_text_icons {
     display: flex;
     flex-direction: column;
+    div {
+      img {
+        width: 40%;
+      }
+    }
     .gold_arrow {
       margin-top: 10%;
       margin-bottom: 10%;

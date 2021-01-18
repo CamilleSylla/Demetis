@@ -27,7 +27,7 @@ export default function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0);
     setShow({...show, component: 0})
-  })
+  },[])
   return (
     <motion.div
       exit="out"

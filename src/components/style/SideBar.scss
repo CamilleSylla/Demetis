@@ -73,15 +73,19 @@
     width: 100%;
   
     #sidebar_content {
+      height: 100%;
       #sidebar_link {
         li {
+          img {
+            width: 10%;
+          }
           a {
-            font-size: 30px;
+            font-size: 18px;
           }
         }
       }
-      img {
-        width: 30%;
+      #side_logo {
+        width: 17%;
       }
     }
   }

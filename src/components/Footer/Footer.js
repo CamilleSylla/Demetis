@@ -36,50 +36,45 @@ export default function Footer() {
         </div>
       </div>
       <div id="footer_table_container">
-        <table>
-          <tr>
-            {Content.titles.map((titles, i) => {
-              return (
-                <th key={i}>
-                  <p className="footer_title">{titles}</p>
-                </th>
-              );
-            })}
-          </tr>
-          <tr>
-            <th>
-              {Content.explore.map((infos, i) => {
-                return (
-                  <tr key={i}>
-                    <NavLink
-                      exact={true}
-                      to={infos.path}
-                      activeStyle={{
-                        fontWeight: "bold",
-                        color: "rgba(211, 187, 140, 1)",
-                      }}
-                      className="footer_font"
-                    >
-                      {infos.link}
-                    </NavLink>
-                  </tr>
-                );
-              })}
-            </th>
-            <th className="footer_font">
-              <tr>{Content.adresse.rue}</tr>
-              <tr>
-                {Content.adresse.cp}, {Content.adresse.ville}
-              </tr>
-              <tr>{Content.adresse.pays}</tr>
-            </th>
-            <th className="footer_font footer_links">
-              {Content.social.map((social, i) => {
+        <div>
+          <h6>{Content.titles[0]}</h6>
+          <div>
+          {Content.explore.map((details, i) => {
+            return (<NavLink
+              exact={true}
+              to={details.path}
+              activeStyle={{
+                fontWeight: "bold",
+                color: "rgba(211, 187, 140, 1)",
+              }}
+              className="footer_font"
+            >
+              {details.link}
+            </NavLink>)
+          })}
+          </div>
+        </div>
+        <div>
+          <h6>{Content.titles[1]}</h6>
+          <div>
+          <p>{Content.adresse.rue}</p>
+          <p>{Content.adresse.cp}, {Content.adresse.ville}</p>
+          <p>{Content.adresse.pays}</p>
+          </div>
+        </div>
+        <div>
+          <h6>{Content.titles[2]}</h6>
+          <div>
+          {Content.social.map((social, i) => {
                 return <a href={social.link} key={i}>{social.title}</a>;
               })}
-            </th>
-          </tr>
-        </table>
+          </div>
+        </div>
+        <div>
+          <h6>{Content.titles[3]}</h6>
+          <div>
+          </div>
+        </div>
       </div>
     </div>
   );

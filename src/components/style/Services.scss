@@ -28,20 +28,37 @@
       align-items: center;
       flex-direction: column;
       text-align: center;
-      width: 50%;
+      width: 80%;
       margin-bottom: 15%;
       color: #1c3661;
       h5 {
+        text-align: center;
         font-size: 34px;
         font-weight: 700;
       }
       p {
         font-size: 20px;
         color: #1c3661;
+        
       }
       img {
         width: 10%;
       }
+      .assurance_cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p {
+          text-align: center;
+          width: 50%;
+        }
+        img {
+          margin-top: 10%;
+          width: 10%;
+        }
+      }
+      
       #fisc_content_text_icon {
         div {
           width: 100%;
@@ -140,6 +157,27 @@
 @media only screen 
 and (max-width:800px)
 and (orientation : portrait) {
+  .layer_container {
+    .layer_content {
+      p {
+        text-align: justify;
+      }
+      h5 {
+        text-align: center;
+      }
+      img {
+        width: 30%;
+      }
+      .assurance_cards {
+        p {
+          width: 100%;
+        }
+        img {
+          width: 30%;
+        }
+      }
+    }
+  }
   #services {
     height: auto;
     flex-direction: column;
@@ -151,8 +189,6 @@ and (orientation : portrait) {
         width: 100%;
         text-align: center;
       }
-      h2 {
-      }
       p {
         width: 100%;
     text-align: center;
@@ -162,25 +198,9 @@ and (orientation : portrait) {
       margin-top: 5%;
       margin-bottom: 10%;
       width: 80%;
-      h4 {
-      }
-      p {
-      }
       .services_cards {
-        p{
-        }
-        #fleche {
-        }
         .banner_services_icons {
           width: 35%;
-        }
-        &:hover {
-          p {
-          }
-          h4 {
-          }
-          #fleche {
-          }
         }
       }
     }

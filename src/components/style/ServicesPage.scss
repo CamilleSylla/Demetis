@@ -6,21 +6,34 @@
   align-items: center;
   justify-content: center;
   z-index: 200;
+
   .page_title {
     color: #1c3661;
     margin-bottom: 7vh;
   }
 }
-@media only screen 
-and (max-width:800px)
-and (orientation : portrait) {
+@media only screen and (max-width: 800px) and (orientation: portrait) {
   #services_page {
     width: 100%;
     height: auto;
+    #services_all {
+      div {
+        .layer_container {
+          .layer_content {
+            .assurance_cards {
+              img {
+                width: 30%;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .page_title {
       margin-top: 20%;
-    width: 100%;
-    text-align: center;
+      width: 100%;
+      text-align: center;
     }
   }
 }
