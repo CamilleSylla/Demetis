@@ -44,10 +44,14 @@ button {
     justify-content: space-evenly;
     align-items: center;
     transition: all ease 0.2s;
-    .button_gold {
-      margin-top: 0;
-      height: 35px;
+    #nav_contact {
+      opacity: 0;
     }
+      .button_gold {
+        margin-top: 0;
+        height: 35px;
+      }
+    
   }
   #nav_social {
     width: 20%;

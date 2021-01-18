@@ -11,7 +11,7 @@ import { ServicesContext } from "../Context/ServicesContext";
 export default function Home() {
   
   const [ logoSelect, setLogoSelect ] = useContext(NavContext);
- 
+  
   const pageVariant = {
     ini: {
       opacity: 1,

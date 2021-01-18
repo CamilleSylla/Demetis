@@ -165,6 +165,7 @@ export default function Nav() {
         </div>
         
         <div id="top_nav_logo">
+        <div></div>
         <Link id="nav_contact" className="button_gold" to="/contact">
           {Text}
         </Link>
