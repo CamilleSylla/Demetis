@@ -9,10 +9,11 @@ import Assu from "../../../assets/Icons/assurance.svg";
 import Succ from "../../../assets/Icons/succession.svg";
 import Tresorerie from "../../../assets/Icons/tresorerie.svg";
 import { ServicesContext } from "../../Context/ServicesContext";
+import { ActiveCardContext } from "../../Context/ActiveCardContext";
 
 export default function Cards() {
   const [show, setShow] = useContext(ServicesContext);
-  const [active, setActive] = useState("FISCALITE");
+  const [active, setActive] = useContext(ActiveCardContext);
   const CardsContent = [
     { title: "FISCALITE", content: "Réduire mes impôts", img: Fisc },
     { title: "RETRAITE", content: "Préparer ma retraite", img: Retraite },

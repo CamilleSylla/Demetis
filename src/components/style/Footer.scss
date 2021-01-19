@@ -53,10 +53,10 @@
   
 }
 
-@media only screen and (max-width: 800px) and (orientation: portrait) {
+@media only screen and (max-width: 900px)
+//  and (orientation: portrait) 
+ {
   #footer {
-    * {
-    }
     flex-direction: column;
     height: auto;
     #footer_logo_container {

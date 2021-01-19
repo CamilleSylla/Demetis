@@ -6,10 +6,11 @@ import Immo from "../../../assets/Icons/immobilier.svg";
 import Arrow from "../../../assets/Icons/arrowBlue.svg";
 import { Link } from "react-router-dom";
 import { ServicesContext } from "../../Context/ServicesContext";
+import { ActiveCardContext } from "../../Context/ActiveCardContext";
 
 export default function Cards() {
   const [show, setShow] = useContext(ServicesContext);
-
+  const [active, setActive] = useContext(ActiveCardContext)
   const Content = [
     {
       categorie: "FISCALITE",
@@ -44,7 +45,10 @@ export default function Cards() {
           <Link to="/services" key={i}>
             <div
               className="services_cards"
-              onClick={() => setShow({ ...show, component: details.target })}
+              onClick={() => {
+                setShow({ ...show, component: details.target })
+                setActive(details.categorie)
+              }}
             >
               <img
                 className="banner_services_icons"

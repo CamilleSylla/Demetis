@@ -12,6 +12,7 @@ import Contact from "./components/Contact/Contact.js";
 import Footer from "./components/Footer/Footer";
 import FourOhFour from "./components/404/404";
 import { ContactProvider } from "./components/Context/ContactContext";
+import { ActiveCardProvider } from "./components/Context/ActiveCardContext";
 
 function App() {
   const location = useLocation;
@@ -23,21 +24,23 @@ function App() {
           <TargetProvider>
             <ServicesProvider>
               <ContactProvider>
-              <Route
-                render={({ location }) => (
-                  <AnimatePresence exitBeforeEnter>
-                    <Switch location={location} key={location.pathname}>
-                      <Route path="/" exact component={Home} />
-                      <Route path="/services" component={Main} />
-                      <Route path="/contact" component={Contact} />
-                      <Route path="*">
-                        <FourOhFour />
-                      </Route>
-                    </Switch>
-                  </AnimatePresence>
-                )}
-              />
-              <Footer />
+                <ActiveCardProvider>
+                  <Route
+                    render={({ location }) => (
+                      <AnimatePresence exitBeforeEnter>
+                        <Switch location={location} key={location.pathname}>
+                          <Route path="/" exact component={Home} />
+                          <Route path="/services" component={Main} />
+                          <Route path="/contact" component={Contact} />
+                          <Route path="*">
+                            <FourOhFour />
+                          </Route>
+                        </Switch>
+                      </AnimatePresence>
+                    )}
+                  />
+                  <Footer />
+                </ActiveCardProvider>
               </ContactProvider>
             </ServicesProvider>
           </TargetProvider>

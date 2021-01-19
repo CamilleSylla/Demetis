@@ -9,7 +9,9 @@
         margin-top: 5%;
       }
 
-@media only screen and (max-width: 800px) and (orientation: portrait) {
+      @media only screen and (max-width: 900px)
+      //  and (orientation: portrait) 
+       {
   #assurance {
     #assurance_container {
       width: 80%;
@@ -21,10 +23,6 @@
         justify-content: center;
         align-items: center;
         width: 80%;
-        h5 {
-        }
-        p {
-        }
         .assurance_cards {
           display: flex;
         justify-content: center;

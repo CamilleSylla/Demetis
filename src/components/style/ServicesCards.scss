@@ -51,9 +51,9 @@
         background-color: rgba(211, 187, 140, 1);
         }
 }
-@media only screen 
-and (max-width:800px)
-and (orientation : portrait) {
+@media only screen and (max-width: 900px)
+//  and (orientation: portrait) 
+ {
     #cards_menu {
         height: auto;
         grid-template-columns: 1fr;

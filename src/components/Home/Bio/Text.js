@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import Navid from "../../../assets/Img/Navid.png";
+import Navid from "../../../assets/Img/Navid.webp";
 import { NavContext } from "../../Context/NavContext";
 import Logo from "../../../assets/Logos/LogoWhiteBG.svg";
 

@@ -65,7 +65,7 @@ export default function Assurance({setSubject}) {
             {Content.content.map((details, i) => {
               return (
                 <div className="assurance_cards">
-                  <img src={details.img} />
+                  <img src={details.img} alt="illustration"/>
                   <p>{details.text}</p>
                 </div>
               );
