@@ -6,13 +6,13 @@ export default function Content() {
     title: "Discutons de votre projet ",
     title_2:
       "Remplissez notre formulaire contact. \n Nous reviendrons vers vous dans les plus bref délais.",
-    phone: "06 38 74 52 98",
+    phone: "06 31 89 08 64",
     email: "navid.niktash@demetis.fr",
     adresse: {
-      rue: "1 rue de l'investissement",
+      rue: "5 place du 117ème régiment d'infanterie",
       cp: "72000",
       ville: "Le Mans",
-      pays: "France",
+      pays: "France", 
     },
   };
 

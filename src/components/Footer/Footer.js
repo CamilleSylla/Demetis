@@ -13,7 +13,7 @@ export default function Footer() {
       { path: "/contact", link: "Contact" },
     ],
     adresse: {
-      rue: "3 place du 117ème régiment d'infenterie",
+      rue: "5 place du 117ème régiment d'infanterie",
       cp: "72000",
       ville: "Le Mans",
       pays: "France", 

@@ -140,7 +140,7 @@ export default function Nav() {
     { icon: IgW, link: "https://www.instagram.com/demetisconseil/" },
     { icon: LkW, link: "https://www.linkedin.com/in/navid-niktash-bb75b0179/" },
   ];
-  const Text = "Audit Gratuit";
+  const Text = "Audit Complet";
   return (
     <div>
       <div id="top_nav_container">

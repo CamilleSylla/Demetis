@@ -7,7 +7,7 @@ export default function Text() {
   const Content = {
     title: "Nos Services",
     desc:
-      "Cabinet de conseil en gestion de patrimoine, nous intervenons autour des problématiques liés au patrimoine :",
+      "Cabinet de conseil en gestion de patrimoine, nous intervenons autour des problématiques liées au patrimoine :",
   };
   return (
     <div id="service_title">

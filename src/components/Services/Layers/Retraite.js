@@ -21,7 +21,7 @@ export default function Retraite({setSubject}) {
     desc_2:
       "Toujours d’après la même étude, nous devrions amener ce chiffre à 24,3 millions en 2050, soit une augmentation de 50%.",
     text_3:
-      "Il est primordial de préparer sa retraite afin de compléter les prestations du régime obligatoire qui pourraient être amenés à diminuer au fil du temps.",
+      "Il est primordial de préparer sa retraite afin de compléter les prestations du régime obligatoire qui pourraient être amenées à diminuer au fil du temps.",
   };
   const pageVariant = {
     ini: {

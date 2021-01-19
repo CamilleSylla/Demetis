@@ -7,7 +7,7 @@ export default function Form() {
   }
   return (
     <div id="form">
-      <form id="form_container" action="https://formspree.io/f/mdopyrdp"  method="POST">
+      <form id="form_container" action="https://formspree.io/f/meqpnepe"  method="POST">
         <input type="text" placeholder="Nom Prénom" name="name"/>
         <input type="email" placeholder="Adresse E-mail" name="mail"/>
         <input type="telephone" placeholder="N° de téléphone" name="telephone"/>

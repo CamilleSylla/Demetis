@@ -10,7 +10,7 @@ export default function Text() {
   const Content = {
     title: "Qui sommes nous ?",
     text:
-      "Demetis conseil est un cabinet de conseil en gestion de patrimoine basé au Mans. \n\n Nous intervenons sur les projets immobiliers, les placements financiers, l'optimisation fiscale, les solutions d'assurance et les problématiques de transmission.\n\n Les préconisations se font via un audit se basant sur votre situation civile et fiscale.\n\n Ancien sportif professionnel, je suis diplômé d'un Master de conseil en gestion de patrimoine délivré par l'Aurep.\n\n J'ai à cœur de mettre la pertinence du conseil au centre de nos échanges.\n\n Ensemble, nous ferons le maximum afin de répondre à vos besoins et vous accompagner tout au long de votre vie et ses moments clés.",
+      "Demetis conseil est un cabinet de conseil en gestion de patrimoine basé au Mans. \n\n Nous intervenons sur les projets immobiliers, les placements financiers, l'optimisation fiscale, les solutions d'assurance et les problématiques de transmission.\n\n Les préconisations se font via un audit se basant sur votre situation civile et fiscale.\n\n Ancien sportif professionnel, je suis diplômé d'un Master de conseil en gestion de patrimoine.\n\n J'ai à cœur de mettre la pertinence du conseil au centre de nos échanges.\n\n Ensemble, nous ferons le maximum afin de répondre à vos besoins et vous accompagner tout au long de votre vie et ses moments clés.",
     img: Navid,
   };
   return (
@@ -20,7 +20,7 @@ export default function Text() {
           <div>
             <img src={Content.img} alt="Navid Niktash" />
             <h1>Navid Niktash</h1>
-            <p>Directeur Général</p>
+            <p>Président Fondateur</p>
             <img id="bio_logo" src={Logo} alt="Demetis" />
           </div>
         </div>

@@ -5,7 +5,7 @@ import Logo from "../../../assets/Logos/LogoWhiteBG.svg";
 
 export default function Args() {
   const Sentence =
-    " Nous intervenons autour des problématiques liés au patrimoine.";
+    " Nous intervenons autour des problématiques liées au patrimoine.";
 
   return (
     <div id="args">
