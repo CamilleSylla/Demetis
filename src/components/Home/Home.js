@@ -6,7 +6,6 @@ import Bio from "./Bio/Bio";
 import { motion } from "framer-motion";
 import { NavContext } from "../Context/NavContext";
 import Slider from "./Slider/Slider";
-import { ServicesContext } from "../Context/ServicesContext";
 
 export default function Home() {
   

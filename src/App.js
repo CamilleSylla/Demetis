@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import FourOhFour from "./components/404/404";
 import { ContactProvider } from "./components/Context/ContactContext";
 import { ActiveCardProvider } from "./components/Context/ActiveCardContext";
+import Mentions from "./components/Mention.js";
 
 function App() {
   const location = useLocation;
@@ -32,6 +33,7 @@ function App() {
                           <Route path="/" exact component={Home} />
                           <Route path="/services" component={Main} />
                           <Route path="/contact" component={Contact} />
+                          <Route path="/mentionslegales" component={Mentions} />
                           <Route path="*">
                             <FourOhFour />
                           </Route>

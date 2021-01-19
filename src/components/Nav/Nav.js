@@ -22,7 +22,7 @@ export default function Nav() {
   
   function scrollFunction() {
     const hamburger = document.getElementById("topnav_hamburger_icon");
-    if (location.pathname === "/services") {
+    if (location.pathname === "/services" || location.pathname === "/mentionslegales") {
       if (
         document.body.scrollTop > 300 ||
         document.documentElement.scrollTop > 300

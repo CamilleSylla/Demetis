@@ -13,10 +13,10 @@ export default function Footer() {
       { path: "/contact", link: "Contact" },
     ],
     adresse: {
-      rue: "1 rue de l'investissement",
+      rue: "3 place du 117ème régiment d'infenterie",
       cp: "72000",
       ville: "Le Mans",
-      pays: "France",
+      pays: "France", 
     },
     social: [
       { link: "https://www.instagram.com/demetisconseil/", title: "Instagram" },
@@ -73,6 +73,17 @@ export default function Footer() {
         <div>
           <h6>{Content.titles[3]}</h6>
           <div>
+          <NavLink
+              exact={true}
+              to="/mentionslegales"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "rgba(211, 187, 140, 1)",
+              }}
+              className="footer_font"
+            >
+              Mentions Légales
+            </NavLink>
           </div>
         </div>
       </div>
