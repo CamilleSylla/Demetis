@@ -14,11 +14,15 @@ import FourOhFour from "./components/404/404";
 import { ContactProvider } from "./components/Context/ContactContext";
 import { ActiveCardProvider } from "./components/Context/ActiveCardContext";
 import Mentions from "./components/Mention.js";
+import Cookies from "./components/Cookies/Cookies";
+import { CookieProvider } from "./components/Context/CookieContext";
 
 function App() {
   const location = useLocation;
   return (
     <div className="App">
+      <CookieProvider>
+      <Cookies/>
       <MenuProvider>
         <NavProvider>
           <Nav />
@@ -42,12 +46,14 @@ function App() {
                     )}
                   />
                   <Footer />
+
                 </ActiveCardProvider>
               </ContactProvider>
             </ServicesProvider>
           </TargetProvider>
         </NavProvider>
       </MenuProvider>
+      </CookieProvider>
     </div>
   );
 }

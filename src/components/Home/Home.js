@@ -6,6 +6,7 @@ import Bio from "./Bio/Bio";
 import { motion } from "framer-motion";
 import { NavContext } from "../Context/NavContext";
 import Slider from "./Slider/Slider";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   
@@ -40,6 +41,10 @@ export default function Home() {
       variants={pageVariant}
       transition={pageTransition}
     >
+      <Helmet>
+        <title>Demetis - Accueil</title>
+        <meta name="description" content="Demetis conseil est un cabinet de conseil en gestion de patrimoine basé au Mans. Nous ferons le maximum afin de répondre à vos besoins et vous accompagner tout au long de votre vie et ses moments clés." />
+    </Helmet>
       <div id="home_container">
         <Banner />
         <Args />

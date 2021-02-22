@@ -4,6 +4,7 @@ import Content from "./Content";
 import { motion } from "framer-motion";
 import Form from "./Form";
 import { ServicesContext } from "../Context/ServicesContext";
+import { Helmet } from "react-helmet";
 export default function Contact() {
 
   const [show, setShow] = useContext(ServicesContext);
@@ -36,6 +37,10 @@ export default function Contact() {
       variants={pageVariant}
       transition={pageTransition}
     >
+      <Helmet>
+        <title>Demetis - Contact</title>
+        <meta name="description" content="Prenons un premier rendez-vous afin de discuter de vos projets et d'établir le meilleur chemin a suivre celon votre profil..." />
+    </Helmet>
       <div id="contact">
         <div id="contact_views">
           <Content />

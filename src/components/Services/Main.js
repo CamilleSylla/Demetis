@@ -84,7 +84,6 @@ export default function Main() {
       transition={pageTransition}
     >
       <div>
-        
         <Services />
         <AnimatePresence exitBeforeEnter>
           <div id="services_all">{toShow()}</div>

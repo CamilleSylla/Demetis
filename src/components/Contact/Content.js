@@ -7,7 +7,7 @@ export default function Content() {
     title_2:
       "Remplissez notre formulaire contact. \n Nous reviendrons vers vous dans les plus bref délais.",
     phone: "06 31 89 08 64",
-    email: "navid.niktash@demetis.fr",
+    email: "navid.niktash@demetisconseil.fr",
     adresse: {
       rue: "5 place du 117ème régiment d'infanterie",
       cp: "72000",
@@ -61,7 +61,7 @@ export default function Content() {
           </tr>
           <tr className="rows">
             <th className="rows_name">Email </th>
-            <th>: {Content.email}</th>
+            <th>: <a style={{color: "#d3bb8c", textDecoration: "underline"}} href="mailto:navid.niktash@demetisconseil.fr">{Content.email}</a></th>
           </tr>
           <tr className="rows">
             <th id="adresse" className="rows_name">

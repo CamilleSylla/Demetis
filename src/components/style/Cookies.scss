@@ -1,0 +1,39 @@
+.cookies_container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: #D3BB8C;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8vh;
+    p {
+        color: #1c3661;
+    }
+    a {
+        color: white;
+    }
+    button {
+        color: #1c3661;
+        background: transparent;
+        border: #1c3661 2px solid;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 100px;
+        height: 30px;
+        font-weight: bold;
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 900px)
+//  and (orientation: portrait) 
+ {
+    .cookies_container {
+        height: 25%;
+        flex-direction: column;
+    }
+}

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect} from "react";
 import "../../style/ServicesCards.scss";
 import Capital from "../../../assets/Icons/Capital.svg";
 import Fisc from "../../../assets/Icons/Fisc.svg";
