@@ -57,7 +57,6 @@ export default function Cards() {
               />
               <p className="card_title">{details.categorie}</p>
               <p className="card_text">{details.desc}</p>
-              <img id="fleche" src={Arrow} alt="fleche" />
             </div>
           </Link>
         );
