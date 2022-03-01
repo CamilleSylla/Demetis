@@ -6,7 +6,7 @@ export default function Content() {
     title: "Discutons de votre projet ",
     title_2:
       "Remplissez notre formulaire contact. \n Nous reviendrons vers vous dans les plus bref délais.",
-    phone: "06 31 89 08 64",
+    phone: "07 86 12 23 09",
     email: "navid.niktash@demetisconseil.fr",
     adresse: {
       rue: "5 place du 117ème régiment d'infanterie",

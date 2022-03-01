@@ -36,7 +36,7 @@ export default function Invest() {
           </p>
           <Link
             className="button_gold"
-            to="/services"
+            to="/investissement"
             onClick={() => setLogoSelect(0)}
           >
             Les investissements
