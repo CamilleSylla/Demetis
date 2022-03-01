@@ -6,6 +6,10 @@ export default function Slider () {
         return (
             <article className="recap">
                 <img src="https://images.squarespace-cdn.com/content/v1/5ad8986c1aef1ddf0db431a3/1554801791770-LKNZ7RQQI3YHYNXE1PGU/fiche-repas?format=1000w"/>
+                <div className="recap_hover">
+                <h1>Fiche N°</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia, tortor sit amet eleifend viverra, mauris massa ultricies lorem</p>
+                </div>
             </article>
         )
     }
