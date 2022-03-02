@@ -47,7 +47,6 @@ export default function Invest() {
   };
 
   useEffect(() => {
-      console.log(start.current.children)
       gsap.registerPlugin(ScrollTrigger)
 
     gsap.from( start.current.children , {

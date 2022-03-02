@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
     "emailjs-com": "^2.6.4",
     "framer-motion": "^3.1.4",
     "gsap": "^3.9.1",

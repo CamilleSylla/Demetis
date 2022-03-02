@@ -5,6 +5,7 @@ import { NavContext } from "../Context/NavContext";
 import Header from "./header/Header"
 import "./investissement.scss"
 import Presentation from "./presentation/Presentation";
+import Projects from "./projects/Projects";
 import Slider from "./slider/Slider"
 
 
@@ -49,6 +50,7 @@ export default function Investissement () {
             <Header/>
             <Slider/>
             <Presentation/>
+            <Projects/>
         </motion.div>
     )
 }
