@@ -60,7 +60,6 @@ export default function Invest() {
           start: "top+=25% bottom",
           end: "top+=90% bottom",
           toggleActions: "play play reverse reverse",
-          markers: true
             },
         });
 
