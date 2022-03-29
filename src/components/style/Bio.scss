@@ -75,7 +75,8 @@
             width: 100%;
             border-left: 1px solid #1c366154;
             img {
-              width: 70%;
+              width: 30vh;
+              height: 30vh;
               filter: drop-shadow(0 0 0.75rem #1c3661);
             }
             h1 {
@@ -95,9 +96,7 @@
     }
   }
 }
-@media only screen and (max-width: 900px)
-//  and (orientation: portrait) 
- {
+@media only screen and (max-width: 900px) {
   #bio {
     height: auto;
     overflow: hidden;

@@ -54,7 +54,7 @@ export default function Retraite({setSubject}) {
       transition={pageTransition}
     >
       <div className="layer_container">
-        <div className="layer_content">
+        <div  className="layer_content">
           <h5>{Content.title}</h5>
           <p>{Content.text}</p>
           <img src={Content.icons} alt="profile personne agé" />

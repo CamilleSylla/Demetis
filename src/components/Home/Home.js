@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { NavContext } from "../Context/NavContext";
 import Slider from "./Slider/Slider";
 import { Helmet } from "react-helmet";
+import Invest from "./Invest/Invest";
 
 export default function Home() {
   
@@ -49,6 +50,7 @@ export default function Home() {
         <Banner />
         <Args />
         <Services />
+        <Invest/>
         <Bio />
         <Slider />
       </div>

@@ -1,0 +1,63 @@
+.projects {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+        width: 80%;
+        height: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .desc {
+            width: 40%;
+            h1 {
+                color: #1c3661;
+                text-transform: uppercase;
+            }
+            p {
+                color: #1c3661;
+            }
+        }
+    }
+    .video_grid{
+        display: grid;
+        height: 70vh;
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1vh;
+        column-gap: 1vh;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            width: 100%;
+                height: 100%;
+                overflow: hidden;
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+                h3 {
+                    font-size: 1rem;
+                    text-align: left;
+                    width: 100%;
+                }
+                img {
+                    border-top-left-radius: 10px;
+                    opacity: .75;
+                    transition: all ease .5s;
+                }
+                &:hover {
+                   img {
+                       opacity: 1;
+                   }
+                }
+        }
+    }
+}

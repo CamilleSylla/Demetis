@@ -16,6 +16,7 @@ import { ActiveCardProvider } from "./components/Context/ActiveCardContext";
 import Mentions from "./components/Mention.js";
 import Cookies from "./components/Cookies/Cookies";
 import { CookieProvider } from "./components/Context/CookieContext";
+import Investissement from "./components/investissement/Investissement";
 
 function App() {
   const location = useLocation;
@@ -37,6 +38,7 @@ function App() {
                           <Route path="/" exact component={Home} />
                           <Route path="/services" component={Main} />
                           <Route path="/contact" component={Contact} />
+                          <Route path="/investissement" component={Investissement} />
                           <Route path="/mentionslegales" component={Mentions} />
                           <Route path="*">
                             <FourOhFour />
